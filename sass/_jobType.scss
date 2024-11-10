@@ -1,0 +1,116 @@
+.main {
+  .dropdown-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 22px;
+    @include blockMargin;
+    background-color: white;
+    color: black;
+    padding-block: 9px;
+    width: 100%;
+    max-width: 300px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    // border-bottom-left-radius: 0px;
+    // border-bottom-right-radius: 0px;
+    cursor: pointer;
+  }
+
+  .chevron-icon {
+    //  margin-left: auto;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    transform: translateY(33%);
+  }
+
+  .dropdown-list {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -5px;
+    background-color: white;
+    width: 100%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transform: translateY(100%);
+    font-size: 23px;
+  }
+
+  .job-type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 21px 0px;
+
+  }
+
+  .job-name {
+    padding-left: 10px;
+    font-weight: 300;
+  }
+
+  .add-car {
+    background-color: $buttonsBackgr;
+    color: white;
+    border: none;
+    padding: 10px 34px;
+    border-radius: 40px;
+    font-weight: 400;
+    margin-top: 160px;
+    cursor: pointer;
+    font-size: 23px;
+  }
+
+  .inputs-mileage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    width: 100%;
+    max-width: 300px;
+    background-color: $itemBackgr;
+    padding: 35px 17px;
+    border-radius: 30px;
+
+    .input-container {
+      margin-bottom: 10px;
+      width: inherit;
+
+      .inp-title {
+        display: block;
+        color: white;
+        padding-left: 5px;
+        margin-bottom: 5px;
+      }
+
+      .input {
+        width: inherit;
+        height: 40px;
+        border-radius: 13px;
+        border: none;
+        padding: 10px;
+      }
+    }
+
+
+    .add-car {
+      background-color: $buttonsBackgr;
+      color: white;
+      border: 1px solid white;
+      padding: 10px 34px;
+      border-radius: 40px;
+      font-weight: 300;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+
+  }
+
+}

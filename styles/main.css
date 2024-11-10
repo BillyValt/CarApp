@@ -1,0 +1,332 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+.main .add-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #404076;
+  border: none;
+  font-size: 25px;
+  color: white;
+  font-style: normal;
+  font-weight: 300;
+  border-radius: 40px;
+  padding: 9px 10px;
+  padding-right: 20px;
+  margin-top: 47px;
+  cursor: pointer;
+}
+.main .add-button .plus-icon {
+  font-size: 20px;
+}
+.main .car-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  width: 440px;
+  margin-top: 30px;
+}
+.main .car-list .car-log {
+  background-color: #404076;
+  display: flex;
+  font-size: 22px;
+  justify-content: space-evenly;
+  width: 340px;
+  margin-top: 30px;
+  cursor: pointer;
+  padding: 15px 20px 15px 10px;
+  border-radius: 30px;
+}
+.main .car-list .car-log .number {
+  display: flex;
+  align-items: center;
+  font-size: 28px;
+  padding-right: 30px;
+}
+.main .car-list .car-log .car-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 250px;
+  width: 100%;
+}
+.main .car-list .car-log .car-name {
+  font-size: 25px;
+  padding-bottom: 2px;
+  font-weight: bold;
+}
+.main .car-list .car-log .car-vin {
+  color: #AFAFAF;
+  font-size: 20px;
+}
+.main .car-list .no-cars {
+  margin-top: 60px;
+  font-size: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+.main .inputs-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
+  background-color: #404076;
+  border-radius: 30px;
+  padding: 35px 17px;
+}
+.main .inputs-block .input-container {
+  margin-bottom: 10px;
+}
+.main .inputs-block .input-container .inp-title {
+  color: white;
+  padding-left: 5px;
+  margin-bottom: 5px;
+}
+.main .inputs-block .input-container .input {
+  width: 300px;
+  height: 40px;
+  border-radius: 13px;
+  border: none;
+  padding: 10px;
+}
+.main .inputs-block .add-car {
+  border: 1px solid white;
+  color: white;
+  padding: 10px 34px;
+  border-radius: 40px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-weight: 300;
+}
+
+.main .dropdown-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-size: 22px;
+  margin-top: 47px;
+  background-color: white;
+  color: black;
+  padding-block: 9px;
+  width: 100%;
+  max-width: 300px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  cursor: pointer;
+}
+.main .chevron-icon {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  transform: translateY(33%);
+}
+.main .dropdown-list {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: -5px;
+  background-color: white;
+  width: 100%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  transform: translateY(100%);
+  font-size: 23px;
+}
+.main .job-type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 21px 0px;
+}
+.main .job-name {
+  padding-left: 10px;
+  font-weight: 300;
+}
+.main .add-car {
+  background-color: #404076;
+  color: white;
+  border: none;
+  padding: 10px 34px;
+  border-radius: 40px;
+  font-weight: 400;
+  margin-top: 160px;
+  cursor: pointer;
+  font-size: 23px;
+}
+.main .inputs-mileage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  width: 100%;
+  max-width: 300px;
+  background-color: #404076;
+  padding: 35px 17px;
+  border-radius: 30px;
+}
+.main .inputs-mileage .input-container {
+  margin-bottom: 10px;
+  width: inherit;
+}
+.main .inputs-mileage .input-container .inp-title {
+  display: block;
+  color: white;
+  padding-left: 5px;
+  margin-bottom: 5px;
+}
+.main .inputs-mileage .input-container .input {
+  width: inherit;
+  height: 40px;
+  border-radius: 13px;
+  border: none;
+  padding: 10px;
+}
+.main .inputs-mileage .add-car {
+  background-color: #404076;
+  color: white;
+  border: 1px solid white;
+  padding: 10px 34px;
+  border-radius: 40px;
+  font-weight: 300;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.main .history-title {
+  font-size: 30px;
+  font-weight: 300;
+}
+.main .add-button--log {
+  margin-top: 30px;
+}
+.main .logs-container {
+  margin-top: 20px;
+}
+.main .logs-container .log {
+  margin-top: 10px;
+  position: relative;
+  background-color: #404076;
+  border-radius: 30px;
+  padding: 20px 0;
+  max-width: 320px;
+}
+.main .logs-container .log .log-name {
+  font-size: 27px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.main .logs-container .log .log-name--yellow {
+  color: #FAED26;
+}
+.main .logs-container .log .log-name--blue {
+  color: lightcoral;
+}
+.main .logs-container .log .log-date,
+.main .logs-container .log .log-next,
+.main .logs-container .log .log-mileage {
+  font-size: 23px;
+  padding-top: 13px;
+  padding-left: 31px;
+}
+
+.main .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 55px;
+}
+.main .title .oiler-icon {
+  width: 74px;
+  filter: invert(80%) sepia(26%) saturate(4931%) hue-rotate(357deg) brightness(103%) contrast(108%);
+  margin-right: 10px;
+  cursor: pointer;
+}
+.main .title__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main .title__name {
+  font-size: 40px;
+  color: #FAED26;
+  font-family: kodchasan, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.main .title__subname {
+  font-size: 24px;
+  color: #AFAFAF;
+}
+.main .subtitle {
+  color: white;
+  font-size: 30px;
+  margin-top: 25px;
+}
+.main .car-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #AFAFAF;
+  margin-top: 20px;
+}
+.main .car-info-container .car-icon {
+  filter: invert(84%) sepia(1%) saturate(0%) hue-rotate(237deg) brightness(87%) contrast(81%);
+}
+.main .car-info-container .car-name {
+  font-size: 27px;
+  margin-top: -12px;
+}
+.main .car-info-container .car-vin {
+  font-size: 22px;
+}
+
+body {
+  background-color: #4C3158;
+  font-family: "Roboto Condensed";
+  color: white;
+  height: 1060px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 440px;
+  min-width: 300px;
+  font-weight: 300;
+  margin: 0 auto;
+}/*# sourceMappingURL=main.css.map */

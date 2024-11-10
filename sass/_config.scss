@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+$yellow: #FAED26;
+// $pink: #6e7e80;
+$pink: #AFAFAF;
+// $buttonsBackgr: #5A5560;
+$buttonsBackgr: #404076;
+$itemBackgr: #404076;
+
+$robotoCon: "Roboto Condensed";
+
+@mixin blockMargin {
+  margin-top: 47px;
+}

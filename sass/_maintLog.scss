@@ -1,0 +1,59 @@
+.main {
+  .history-title {
+    font-size: 30px;
+    font-weight: 300;
+  }
+
+  .add-button--log {
+    margin-top: 30px;
+  }
+
+  .logs-container {
+    margin-top: 20px;
+
+    .log {
+      margin-top: 10px;
+      position: relative;
+      background-color: $itemBackgr;
+      border-radius: 30px;
+      padding: 20px 0;
+      max-width: 320px;
+
+      .log-name {
+        font-size: 27px;
+        text-align: center;
+        // padding: 16px 0 3px 0;
+        margin-bottom: 10px;
+      }
+
+      .log-name--yellow {
+        color: $yellow;
+      }
+      .log-name--blue {
+        color: lightcoral;
+      }
+
+      .log-date,
+      .log-next,
+      .log-mileage {
+        font-size: 23px;
+        padding-top: 13px;
+        padding-left: 31px;
+         // letter-spacing: 1.3px;
+      }
+    }
+  }
+
+  // .log::before,
+  // .log::after {
+  //   content: '';
+  //   display: block;
+  //   position: absolute;
+  //   height: 2px;
+  //   background-color: rgb(85, 77, 106);
+  //   bottom: -16px;
+  //   width: 100%;
+  // }
+
+
+}

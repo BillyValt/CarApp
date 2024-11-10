@@ -1,0 +1,62 @@
+.main {
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 55px;
+
+
+    .oiler-icon {
+      width: 74px;
+      filter: invert(80%) sepia(26%) saturate(4931%) hue-rotate(357deg) brightness(103%) contrast(108%);
+      margin-right: 10px;
+      cursor: pointer;
+    }
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__name {
+      font-size: 40px;
+      color: $yellow;
+      font-family: kodchasan, sans-serif;
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    &__subname {
+      font-size: 24px;
+      color: $pink;
+    }
+  }
+
+  .subtitle {
+    color: white;
+    font-size: 30px;
+    margin-top: 25px;
+  }
+
+  .car-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $pink;
+    margin-top: 20px;
+
+    .car-icon {
+      filter: invert(84%) sepia(1%) saturate(0%) hue-rotate(237deg) brightness(87%) contrast(81%);;
+    }
+
+    .car-name {
+      font-size: 27px;
+      margin-top: -12px;
+    }
+
+    .car-vin {
+      font-size: 22px;
+    }
+  }
+}
