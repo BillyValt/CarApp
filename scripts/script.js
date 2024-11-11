@@ -1,8 +1,7 @@
-import { saveToStorage, getFromStorage } from './utils/saveToStorage.js';
+import { saveToStorage, getFromStorage, removeFromStorage } from './utils/saveToStorage.js';
 
 const getCars = getFromStorage('carsData');
 const carListEl = document.querySelector('.car-list');
-
 
 renderCarList();
 
@@ -14,7 +13,7 @@ function renderCarList() {
 
       carListEl.innerHTML += `
         <a href="maintLog.html">
-          <div class="car-log">
+          <div class="car-log" data-car-id=${index}>
             <div class="number">${carNum}</div>
             <div class="car-info">
               <div class="car-name">${carName} <span class="car-year">${carYear}</span></div>
@@ -31,3 +30,18 @@ function renderCarList() {
     `;
   }
 }
+
+
+const carLogEl = document.querySelectorAll('.car-log');
+
+carLogEl.forEach((logEl, index) => {
+  const logLink = logEl.dataset.carId;
+  console.log(logEl.dataset, index)
+
+  logEl.addEventListener('click', () => {
+    removeFromStorage('clickedCarId');
+    saveToStorage('clickedCarId', logLink);
+    console.log(logLink);
+  });
+})
+

@@ -9,3 +9,7 @@ export function getFromStorage(item) {
 
   return parsed;
 }
+
+export function removeFromStorage(item) {
+  localStorage.removeItem(item);
+};

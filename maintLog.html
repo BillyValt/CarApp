@@ -18,18 +18,17 @@
 
 <body>
   <div class="main">
-    <div class="title">
+    <div class="nav-bar">
       <a href="index.html">
-        <div class="title__icon">
-          <img class="oiler-icon" src="icons/oiler-icon.svg" alt="oiler">
-
-        </div>
+        <button class="back-btn">
+          <svg class="left-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+            class="bi bi-chevron-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+          </svg>
+          Назад</button>
       </a>
-
-      <div class="title__container">
-        <div class="title__name">CAR MAINT</div>
-        <div class="title__subname">учет обслуживания авто</div>
-      </div>
+      <div class="date-time">11.12.24 <span class="nav-time">19:17</span></div>
     </div>
 
     <div class="subtitle">История обслуживания</div>
@@ -88,8 +87,9 @@
       </div>
 
     </div>
-
+    <button class="remove-btn">Удалить авто</button>
   </div>
+
 
   <script type="module" src="scripts/maintLog.js"></script>
 </body>
