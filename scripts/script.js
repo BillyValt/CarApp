@@ -6,7 +6,7 @@ const carListEl = document.querySelector('.car-list');
 renderCarList();
 
 function renderCarList() {
-  if (getCars) {
+  if (getCars.length > 0) {
     getCars.forEach((carInfo, index) => {
       let carNum = index + 1;
       const { carName, carYear, carVin } = carInfo;
@@ -45,3 +45,16 @@ carLogEl.forEach((logEl, index) => {
   });
 })
 
+const maintHistory = [{
+  type: 'oil',
+  date: '14.10.24',
+  mileage: '267463',
+  nextMaintDate: '14.10.24',
+  nextMaintMileage: '277463'
+}, {
+  type: 'belt',
+  date: '14.10.24',
+  mileage: '267463',
+  nextMaintMileage: '277463'
+}
+]
