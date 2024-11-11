@@ -10,8 +10,9 @@ let carsData = getFromStorage('carsData') || [];
 saveToStorage('carsData', carsData);
 
 
-addCarBtEl.addEventListener('click', () => {
+yearInputEl.value = 2000;
 
+addCarBtEl.addEventListener('click', () => {
   const carName = carBrandInputEl.value;
   const carYear = yearInputEl.value;
   const carVin = vinInputEl.value;
@@ -25,6 +26,10 @@ addCarBtEl.addEventListener('click', () => {
   carsData.push(carData);
 
   saveToStorage('carsData', carsData);
+
+  carBrandInputEl.value = '';
+  yearInputEl.value = '';
+  vinInputEl.value = '';
 
   console.log(carName);
   console.log(carYear);
