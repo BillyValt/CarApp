@@ -41,7 +41,7 @@ li {
   margin-top: 30px;
 }
 .main .car-list .car-log {
-  background: #404076;
+  background: linear-gradient(180deg, #0e3355 0%, #124775 43%);
   display: flex;
   font-size: 22px;
   justify-content: space-evenly;
@@ -98,10 +98,9 @@ li {
   flex-direction: column;
   align-items: center;
   margin-top: 25px;
-  background-color: #404076;
+  background: linear-gradient(180deg, #0e3355 0%, #124775 43%);
   border-radius: 30px;
   padding: 35px 17px;
-  box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.2);
 }
 .main .inputs-block .input-container {
   margin-bottom: 10px;
@@ -195,7 +194,7 @@ li {
   margin-top: 30px;
   width: 100%;
   max-width: 300px;
-  background-color: #404076;
+  background-color: linear-gradient(180deg, #0e3355 0%, #124775 43%);
   padding: 35px 17px;
   border-radius: 30px;
 }
@@ -240,7 +239,7 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(94, 94, 181);
+  background-color: transparent;
   border: none;
   font-size: 25px;
   color: white;
@@ -271,9 +270,10 @@ li {
 .main .logs-container .log {
   margin-top: 10px;
   position: relative;
-  background-color: #404076;
+  background: linear-gradient(180deg, #0e3355 0%, #124775 43%);
   border-radius: 30px;
-  padding: 20px 0;
+  padding: 20px 0px;
+  padding: 0px 0px 20px 0px;
   max-width: 320px;
   height: 230px;
   overflow: hidden;
@@ -285,6 +285,7 @@ li {
   color: rgb(255, 255, 255);
   font-size: 27px;
   text-align: center;
+  margin-top: 20px;
   margin-bottom: 10px;
 }
 .main .logs-container .log .log-date,
@@ -296,6 +297,8 @@ li {
   padding-left: 31px;
 }
 .main .logs-container .log .log-next {
+  font-size: 24px;
+  font-weight: 400;
   color: #FAED26;
   padding-bottom: 60px;
 }
@@ -371,7 +374,7 @@ html {
 }
 
 body {
-  background: linear-gradient(180deg, rgb(30, 13, 39) 0%, rgb(159, 108, 182) 66%) no-repeat center;
+  background: linear-gradient(180deg, rgb(19, 1, 28) 0%, rgb(161, 97, 189) 43%) no-repeat center;
   background-attachment: fixed;
   font-family: "Roboto Condensed";
   color: white;

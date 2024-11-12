@@ -12,7 +12,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: $buttonsBackgr;
+      background-color: transparent;
       border: none;
       font-size: 25px;
       color: white;
@@ -50,9 +50,10 @@
     .log {
       margin-top: 10px;
       position: relative;
-      background-color: $itemBackgr;
+      background: $itemBackgr;
       border-radius: 30px;
-      padding: 20px 0;
+      padding: 20px 0px;
+      padding: 0px 0px 20px 0px;
       max-width: 320px;
       height: 230px;
       // box-shadow: $cardShadow;
@@ -65,7 +66,7 @@
         color: rgb(255, 255, 255);
         font-size: 27px;
         text-align: center;
-        // padding: 16px 0 3px 0;
+        margin-top: 20px;
         margin-bottom: 10px;
       }
 
@@ -89,6 +90,8 @@
       }
 
       .log-next {
+        font-size: 24px;
+        font-weight: 400;
         color: $yellow;
         padding-bottom: 60px;
       }
