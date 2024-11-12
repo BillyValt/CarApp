@@ -56,29 +56,41 @@
       max-width: 320px;
       height: 230px;
       // box-shadow: $cardShadow;
+      overflow: hidden;
 
       .log-name {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        color: rgb(255, 255, 255);
         font-size: 27px;
         text-align: center;
         // padding: 16px 0 3px 0;
         margin-bottom: 10px;
       }
 
-      .log-name--yellow {
-        color: $yellow;
-      }
+      // .log-name--yellow {
 
-      .log-name--blue {
-        color: lightcoral;
-      }
+
+      // }
+
+      // .log-name--blue {
+      //   color: lightcoral;
+      // }
 
       .log-date,
       .log-next,
       .log-mileage {
+        color: rgb(220, 220, 220);
         font-size: 23px;
         padding-top: 13px;
         padding-left: 31px;
         // letter-spacing: 1.3px;
+      }
+
+      .log-next {
+        color: $yellow;
+        padding-bottom: 60px;
       }
     }
   }
