@@ -17,7 +17,7 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #404076;
+  background-color: rgb(94, 94, 181);
   border: none;
   font-size: 25px;
   color: white;
@@ -28,7 +28,6 @@ li {
   padding-right: 20px;
   margin-top: 35px;
   cursor: pointer;
-  box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.2);
 }
 .main .add-button .plus-icon {
   font-size: 20px;
@@ -51,7 +50,6 @@ li {
   cursor: pointer;
   padding: 15px 20px 15px 10px;
   border-radius: 30px;
-  box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.2);
 }
 .main .car-list .car-log .number {
   display: flex;
@@ -122,6 +120,7 @@ li {
 }
 .main .inputs-block .add-car {
   border: 1px solid white;
+  background-color: transparent;
   color: white;
   padding: 10px 34px;
   border-radius: 40px;
@@ -179,7 +178,7 @@ li {
   font-weight: 300;
 }
 .main .add-car {
-  background-color: #404076;
+  background-color: rgb(94, 94, 181);
   color: white;
   border: none;
   padding: 10px 34px;
@@ -218,7 +217,7 @@ li {
   padding: 10px;
 }
 .main .inputs-mileage .add-car {
-  background-color: #404076;
+  background-color: rgb(94, 94, 181);
   color: white;
   border: 1px solid white;
   padding: 10px 34px;
@@ -241,7 +240,7 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #404076;
+  background-color: rgb(94, 94, 181);
   border: none;
   font-size: 25px;
   color: white;
@@ -251,7 +250,6 @@ li {
   padding: 9px 10px;
   padding-right: 20px;
   cursor: pointer;
-  box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.2);
 }
 .main .nav-bar .back-btn .left-icon {
   font-size: 50px;
@@ -278,7 +276,6 @@ li {
   padding: 20px 0;
   max-width: 320px;
   height: 230px;
-  box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.2);
 }
 .main .logs-container .log .log-name {
   font-size: 27px;
@@ -312,7 +309,6 @@ li {
   border-radius: 40px;
   padding: 9px 20px;
   cursor: pointer;
-  box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.2);
 }
 
 .main .title {

@@ -36,6 +36,20 @@ function updateTime() {
   const minutes = String(now.getMinutes()).padStart(2, '0');
   const time = `${hours}:${minutes}`;
 
+  const maintHistory = [{
+    type: 'oil',
+    date: '14.10.24',
+    mileage: '267463',
+    nextMaintDate: '14.10.24',
+    nextMaintMileage: '277463'
+  }, {
+    type: 'belt',
+    date: '14.10.24',
+    mileage: '267463',
+    nextMaintMileage: '277463'
+  }
+  ]
+
   dateTimeEl.innerHTML = `
   ${date} ${time}
 `;
@@ -87,19 +101,5 @@ function renderLogsList() {
         <div class="log-next">Замените на: 318785км</div>
       </div>
   `;
-
-  const maintHistory = [{
-    type: 'oil',
-    date: '14.10.24',
-    mileage: '267463',
-    nextMaintDate: '14.10.24',
-    nextMaintMileage: '277463'
-  }, {
-    type: 'belt',
-    date: '14.10.24',
-    mileage: '267463',
-    nextMaintMileage: '277463'
-  }
-  ]
 }
 

@@ -13,9 +13,9 @@
     border-radius: 40px;
     padding: 9px 10px;
     padding-right: 20px;
-margin-top: 35px;
+    margin-top: 35px;
     cursor: pointer;
-    box-shadow: $cardShadow;
+    // box-shadow: $cardShadow;
 
     .plus-icon {
       font-size: 20px;
@@ -32,7 +32,7 @@ margin-top: 35px;
 
 
     .car-log {
-      background: $buttonsBackgr;
+      background: $itemBackgr;
       display: flex;
       font-size: 22px;
       justify-content: space-evenly;
@@ -41,7 +41,7 @@ margin-top: 35px;
       cursor: pointer;
       padding: 15px 20px 15px 10px;
       border-radius: 30px;
-      box-shadow: $cardShadow;
+      // box-shadow: $cardShadow;
 
 
       .number {
