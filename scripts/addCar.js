@@ -3,14 +3,12 @@ import { saveToStorage, getFromStorage } from "./utils/saveToStorage.js";
 
 const carBrandInputEl = document.querySelector('.js-addcar-input');
 const yearInputEl = document.querySelector('.js-year-input');
+yearInputEl.value = 2000;
 const vinInputEl = document.querySelector('.js-vin-input');
 const addCarBtEl = document.querySelector('.js-add-car-bt');
 
 let carsData = getFromStorage('carsData') || [];
-saveToStorage('carsData', carsData);
-
-
-yearInputEl.value = 2000;
+// saveToStorage('carsData', carsData);
 
 addCarBtEl.addEventListener('click', () => {
   const carName = carBrandInputEl.value;

@@ -4,18 +4,22 @@
 @import 'jobType';
 @import 'maintLog';
 @import 'titles';
-
+html {
+  background-color: rgb(10, 3, 24);
+}
 body {
   // display: flex;
   // flex-direction: column;
   // justify-content: center;
   // align-items: center;
   // background-color: #46344E;
-  background-color: #4C3158;
+  // background-color: #4C3158;
+  background: $backgrGrad no-repeat center;
+  background-attachment: fixed;
   font-family: $robotoCon;
   color: white;
-  // height: 1060px;
-  padding-bottom: 200px;
+  min-height: 100vh;
+  height: 2000px;
 }
 
 .main {

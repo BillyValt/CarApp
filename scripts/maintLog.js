@@ -4,6 +4,7 @@ import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
 const removeBtn = document.querySelector('.remove-btn');
 const dateTimeEl = document.querySelector('.date-time');
 const carNameEl = document.querySelector('.car-info-container');
+const logsContEl = document.querySelector('.logs-container');
 
 const clickedCarId = getFromStorage('clickedCarId');
 const getCars = getFromStorage('carsData');
@@ -52,3 +53,24 @@ carNameEl.innerHTML = `
 `;
 
 console.log(currentCar);
+
+function renderLogsList() {
+  logsContEl.innerHTML += `
+  
+  `;
+  
+  const maintHistory = [{
+    type: 'oil',
+    date: '14.10.24',
+    mileage: '267463',
+    nextMaintDate: '14.10.24',
+    nextMaintMileage: '277463'
+  }, {
+    type: 'belt',
+    date: '14.10.24',
+    mileage: '267463',
+    nextMaintMileage: '277463'
+  }
+  ]
+}
+

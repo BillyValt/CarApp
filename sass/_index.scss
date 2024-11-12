@@ -13,8 +13,9 @@
     border-radius: 40px;
     padding: 9px 10px;
     padding-right: 20px;
-    @include blockMargin;
+margin-top: 35px;
     cursor: pointer;
+    box-shadow: $cardShadow;
 
     .plus-icon {
       font-size: 20px;
@@ -31,15 +32,16 @@
 
 
     .car-log {
-      background-color: $itemBackgr;
+      background: $buttonsBackgr;
       display: flex;
       font-size: 22px;
       justify-content: space-evenly;
       width: 340px;
-      margin-top: 30px;
+      margin-top: 23px;
       cursor: pointer;
       padding: 15px 20px 15px 10px;
       border-radius: 30px;
+      box-shadow: $cardShadow;
 
 
       .number {

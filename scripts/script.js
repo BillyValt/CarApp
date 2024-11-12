@@ -45,16 +45,3 @@ carLogEl.forEach((logEl, index) => {
   });
 })
 
-const maintHistory = [{
-  type: 'oil',
-  date: '14.10.24',
-  mileage: '267463',
-  nextMaintDate: '14.10.24',
-  nextMaintMileage: '277463'
-}, {
-  type: 'belt',
-  date: '14.10.24',
-  mileage: '267463',
-  nextMaintMileage: '277463'
-}
-]
