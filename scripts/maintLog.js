@@ -1,6 +1,7 @@
 import { saveToStorage, getFromStorage, removeFromStorage } from './utils/saveToStorage.js';
 import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
 
+
 const removeBtn = document.querySelector('.remove-btn');
 const dateTimeEl = document.querySelector('.date-time');
 const carNameEl = document.querySelector('.car-info-container');
@@ -9,11 +10,40 @@ const logsContEl = document.querySelector('.logs-container');
 const clickedCarId = getFromStorage('clickedCarId');
 const getCars = getFromStorage('carsData');
 const currentCar = getCars[clickedCarId];
+
 const date = dayjs().format('D.MM.YY');
 const time = dayjs().format('HH:mm');
+const updTimeId = setInterval(updateTime, 15500);
 
-// function removeCar() {
-// }
+updateTime();
+function updateTime() {
+  const now = new Date();
+  const hours = String(now.getHours()).padStart(2, '0');
+  const minutes = String(now.getMinutes()).padStart(2, '0');
+  const time = `${hours}:${minutes}`;
+
+  // const maintHistory = [{
+  //   type: 'oil',
+  //   date: '14.10.24',
+  //   mileage: '267463',
+  //   nextMaintDate: '14.10.24',
+  //   nextMaintMileage: '277463'
+  // }, {
+  //   type: 'belt',
+  //   date: '14.10.24',
+  //   mileage: '267463',
+  //   nextMaintMileage: '277463'
+  // }
+  // ]
+
+ 
+  clearInterval(updTimeId);
+ 
+
+  dateTimeEl.innerHTML = `
+  ${date} ${time}
+  `;
+}
 
 removeBtn.addEventListener('click', () => {
   const newCarsList = getCars.slice();
@@ -27,35 +57,8 @@ removeBtn.addEventListener('click', () => {
 
 
 console.log(clickedCarId);
-console.log(date);
-console.log(dateTimeEl);
+console.log(currentCar);
 
-function updateTime() {
-  const now = new Date();
-  const hours = String(now.getHours()).padStart(2, '0');
-  const minutes = String(now.getMinutes()).padStart(2, '0');
-  const time = `${hours}:${minutes}`;
-
-  const maintHistory = [{
-    type: 'oil',
-    date: '14.10.24',
-    mileage: '267463',
-    nextMaintDate: '14.10.24',
-    nextMaintMileage: '277463'
-  }, {
-    type: 'belt',
-    date: '14.10.24',
-    mileage: '267463',
-    nextMaintMileage: '277463'
-  }
-  ]
-
-  dateTimeEl.innerHTML = `
-  ${date} ${time}
-`;
-}
-setInterval(updateTime, 15500);
-updateTime();
 
 carNameEl.innerHTML = `
   <div class="car-icon">
@@ -66,9 +69,10 @@ carNameEl.innerHTML = `
   <div class="car-vin"><span class="car-vin--title">VIN: </span>${currentCar.carVin}</div>
 `;
 
-console.log(currentCar);
+
 
 renderLogsList();
+
 function renderLogsList() {
   logsContEl.innerHTML += `
     <div class="log">

@@ -27,6 +27,14 @@
         border: none;
         padding: 10px;
       }
+
+      .input:focus {
+        outline: none;
+      }
+
+      .js-vin-input {
+        text-transform: uppercase;
+      }
     }
 
     .add-car {

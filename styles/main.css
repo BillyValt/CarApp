@@ -36,12 +36,12 @@ li {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: white;
+  color: rgb(244, 244, 244);
   max-width: 440px;
   margin-top: 30px;
 }
 .main .car-list .car-log {
-  background: linear-gradient(180deg, #0e3355 0%, #124775 43%);
+  background: #0c3c66;
   display: flex;
   font-size: 22px;
   justify-content: space-evenly;
@@ -60,7 +60,7 @@ li {
 .main .car-list .car-log .car-info {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   max-width: 250px;
   width: 100%;
 }
@@ -72,6 +72,7 @@ li {
 .main .car-list .car-log .car-vin {
   color: #AFAFAF;
   font-size: 20px;
+  text-transform: uppercase;
 }
 .main .car-list .no-cars {
   margin-top: 60px;
@@ -98,7 +99,7 @@ li {
   flex-direction: column;
   align-items: center;
   margin-top: 25px;
-  background: linear-gradient(180deg, #0e3355 0%, #124775 43%);
+  background: #0c3c66;
   border-radius: 30px;
   padding: 35px 17px;
 }
@@ -117,6 +118,12 @@ li {
   border: none;
   padding: 10px;
 }
+.main .inputs-block .input-container .input:focus {
+  outline: none;
+}
+.main .inputs-block .input-container .js-vin-input {
+  text-transform: uppercase;
+}
 .main .inputs-block .add-car {
   border: 1px solid white;
   background-color: transparent;
@@ -128,54 +135,6 @@ li {
   font-weight: 300;
 }
 
-.main .dropdown-block {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  font-size: 22px;
-  margin-top: 47px;
-  background-color: white;
-  color: black;
-  padding-block: 9px;
-  width: 100%;
-  max-width: 300px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  cursor: pointer;
-}
-.main .chevron-icon {
-  position: absolute;
-  top: 0;
-  right: 10px;
-  transform: translateY(33%);
-}
-.main .dropdown-list {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  bottom: -5px;
-  background-color: white;
-  width: 100%;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  transform: translateY(100%);
-  font-size: 23px;
-}
-.main .job-type {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 21px 0px;
-}
-.main .job-name {
-  padding-left: 10px;
-  font-weight: 300;
-}
 .main .add-car {
   background-color: rgb(94, 94, 181);
   color: white;
@@ -194,9 +153,71 @@ li {
   margin-top: 30px;
   width: 100%;
   max-width: 300px;
-  background-color: linear-gradient(180deg, #0e3355 0%, #124775 43%);
+  background-color: #0c3c66;
   padding: 35px 17px;
   border-radius: 30px;
+  margin-top: 47px;
+}
+.main .inputs-mileage .dropdown-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-size: 20px;
+  margin-bottom: 20px;
+  background-color: white;
+  color: black;
+  padding-block: 9px;
+  width: 100%;
+  max-width: 300px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  cursor: pointer;
+}
+.main .inputs-mileage .dropdown-block--open {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.main .inputs-mileage .chevron-icon {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  transform: translateY(33%);
+}
+.main .inputs-mileage .chevron-icon--open {
+  transform: translateY(-10%);
+  rotate: 180deg;
+}
+.main .inputs-mileage .dropdown-list--close {
+  display: none;
+}
+.main .inputs-mileage .dropdown-list--open {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: -5px;
+  background-color: white;
+  width: 100%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  transform: translateY(100%);
+  font-size: 20px;
+  max-height: 200px;
+  overflow: auto;
+}
+.main .inputs-mileage .job-type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 21px 0px;
+}
+.main .inputs-mileage .job-name {
+  padding-left: 10px;
+  font-weight: 300;
 }
 .main .inputs-mileage .input-container {
   margin-bottom: 10px;
@@ -216,7 +237,7 @@ li {
   padding: 10px;
 }
 .main .inputs-mileage .add-car {
-  background-color: rgb(94, 94, 181);
+  background-color: transparent;
   color: white;
   border: 1px solid white;
   padding: 10px 34px;
@@ -270,7 +291,7 @@ li {
 .main .logs-container .log {
   margin-top: 10px;
   position: relative;
-  background: linear-gradient(180deg, #0e3355 0%, #124775 43%);
+  background: #0c3c66;
   border-radius: 30px;
   padding: 20px 0px;
   padding: 0px 0px 20px 0px;
@@ -374,7 +395,7 @@ html {
 }
 
 body {
-  background: linear-gradient(180deg, rgb(19, 1, 28) 0%, rgb(161, 97, 189) 43%) no-repeat center;
+  background: #031b42 no-repeat center;
   background-attachment: fixed;
   font-family: "Roboto Condensed";
   color: white;

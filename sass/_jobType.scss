@@ -1,61 +1,4 @@
 .main {
-  .dropdown-block {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    font-size: 22px;
-    @include blockMargin;
-    background-color: white;
-    color: black;
-    padding-block: 9px;
-    width: 100%;
-    max-width: 300px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    // border-bottom-left-radius: 0px;
-    // border-bottom-right-radius: 0px;
-    cursor: pointer;
-  }
-
-  .chevron-icon {
-    //  margin-left: auto;
-    position: absolute;
-    top: 0;
-    right: 10px;
-    transform: translateY(33%);
-  }
-
-  .dropdown-list {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    bottom: -5px;
-    background-color: white;
-    width: 100%;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    transform: translateY(100%);
-    font-size: 23px;
-  }
-
-  .job-type {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 21px 0px;
-
-  }
-
-  .job-name {
-    padding-left: 10px;
-    font-weight: 300;
-  }
-
   .add-car {
     background-color: $buttonsBackgr;
     color: white;
@@ -78,6 +21,83 @@
     background-color: $itemBackgr;
     padding: 35px 17px;
     border-radius: 30px;
+    @include blockMargin;
+
+    .dropdown-block {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      font-size: 20px;
+      margin-bottom: 20px;
+      background-color: white;
+      color: black;
+      padding-block: 9px;
+      width: 100%;
+      max-width: 300px;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      // border-bottom-left-radius: 0px;
+      // border-bottom-right-radius: 0px;
+      cursor: pointer;
+    }
+
+    .dropdown-block--open {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .chevron-icon {
+      //  margin-left: auto;
+      position: absolute;
+      top: 0;
+      right: 10px;
+      transform: translateY(33%);
+    }
+
+    .chevron-icon--open {
+      transform: translateY(-10%);
+      rotate: 180deg;
+    }
+
+    .dropdown-list--close {
+      display: none;
+    }
+
+    .dropdown-list--open {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      bottom: -5px;
+      background-color: white;
+      width: 100%;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      transform: translateY(100%);
+      font-size: 20px;
+      max-height: 200px;
+      overflow: auto;
+
+    }
+
+
+
+    .job-type {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 21px 0px;
+
+    }
+
+    .job-name {
+      padding-left: 10px;
+      font-weight: 300;
+    }
 
     .input-container {
       margin-bottom: 10px;
@@ -101,7 +121,7 @@
 
 
     .add-car {
-      background-color: $buttonsBackgr;
+      background-color: transparent;
       color: white;
       border: 1px solid white;
       padding: 10px 34px;
@@ -110,7 +130,5 @@
       margin-top: 20px;
       cursor: pointer;
     }
-
   }
-
 }
