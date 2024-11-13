@@ -197,17 +197,16 @@ li {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   position: absolute;
   bottom: -5px;
   background-color: white;
   width: 100%;
+  padding-left: 17px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   transform: translateY(100%);
   font-size: 20px;
-  max-height: 200px;
-  overflow: auto;
 }
 .main .inputs-mileage .job-type {
   display: flex;

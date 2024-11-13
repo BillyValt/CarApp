@@ -1,7 +1,6 @@
 import { saveToStorage, getFromStorage } from './utils/saveToStorage.js';
 import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
 
-
 const dropDownEl = document.querySelector('.dropdown-block');
 const choseNameEl = document.querySelector('.js-choose-job');
 const dropDownListEl = document.querySelector('.dropdown-list--close');
@@ -9,6 +8,8 @@ const chevronIconEl = document.querySelector('.chevron-icon');
 const jobTypeEl = document.querySelectorAll('.dropdown-list--close .js-job-type');
 const dateTimeEl = document.querySelector('.date-time');
 const carNameEl = document.querySelector('.car-info-container');
+const inputDateEl = document.querySelector('.js-input-job-date');
+const inputMileageEl = document.querySelector('.js-input-mileage');
 
 const date = dayjs().format('D.MM.YY');
 const time = dayjs().format('HH:mm');
