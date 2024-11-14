@@ -64,6 +64,7 @@
 
     .dropdown-list--close {
       display: none;
+
     }
 
     .dropdown-list--open {
@@ -80,11 +81,7 @@
       border-bottom-right-radius: 20px;
       transform: translateY(100%);
       font-size: 20px;
-      // max-height: 200px;
-
     }
-
-
 
     .job-type {
       display: flex;
@@ -112,7 +109,7 @@
 
       .input {
         width: 100%;
-        min-width: 266px;
+        // min-width: 266px;
         height: 40px;
         border-radius: 13px;
         border: none;

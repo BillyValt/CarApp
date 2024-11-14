@@ -230,7 +230,6 @@ li {
 }
 .main .inputs-mileage .input-container .input {
   width: 100%;
-  min-width: 266px;
   height: 40px;
   border-radius: 13px;
   border: none;
