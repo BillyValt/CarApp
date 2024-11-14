@@ -112,10 +112,12 @@
 
       .input {
         width: 100%;
+        min-width: 266px;
         height: 40px;
         border-radius: 13px;
         border: none;
         padding: 10px;
+        box-sizing: border-box;
       }
     }
 
