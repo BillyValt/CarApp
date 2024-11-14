@@ -47,7 +47,8 @@
     margin-top: 20px;
 
     .car-icon {
-      filter: invert(84%) sepia(1%) saturate(0%) hue-rotate(237deg) brightness(87%) contrast(81%);;
+      filter: invert(84%) sepia(1%) saturate(0%) hue-rotate(237deg) brightness(87%) contrast(81%);
+      ;
     }
 
     .car-name {
@@ -56,6 +57,7 @@
     }
 
     .car-vin {
+      text-transform: uppercase;
       font-size: 22px;
     }
   }
