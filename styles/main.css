@@ -230,11 +230,13 @@ li {
 }
 .main .inputs-mileage .input-container .input {
   width: 100%;
+  min-width: 246px;
   height: 40px;
   border-radius: 13px;
   border: none;
   padding: 10px;
   box-sizing: border-box;
+  outline: none;
 }
 .main .inputs-mileage .add-car {
   background-color: transparent;

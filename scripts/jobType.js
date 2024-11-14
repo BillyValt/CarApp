@@ -10,6 +10,7 @@ const dateTimeEl = document.querySelector('.date-time');
 const carNameEl = document.querySelector('.car-info-container');
 const inputDateEl = document.querySelector('.js-input-job-date');
 const inputMileageEl = document.querySelector('.js-input-mileage');
+const addBtnEl = document.querySelector('.js-add-car-btn');
 
 const date = dayjs().format('D.MM.YY');
 const time = dayjs().format('HH:mm');
@@ -20,14 +21,40 @@ const getCars = getFromStorage('carsData');
 const currentCar = getCars[clickedCarId];
 
 let chosenJob;
-let jobData;
+let jobDate;
+let jobMileage;
 
-dropDownEl.addEventListener('click', () => {
-  dropDownListEl.classList.toggle('dropdown-list--open');
-  dropDownEl.classList.toggle('dropdown-block--open');
-  chevronIconEl.classList.toggle('chevron-icon--open');
-})
 
+const carMaintData = {
+  type: 'oil',
+  date: '14.10.24',
+  mileage: '267463',
+  nextMaintDate: '14.10.24',
+  nextMaintMileage: '277463'
+};
+
+// const maintHistory = [{
+//   type: 'oil', 'belt', 'belt1', ''
+//   date: '14.10.24',
+//   mileage: '267463',
+//   nextMaintDate: '14.10.24',
+//   nextMaintMileage: '277463'
+// }, {
+//   type: 'belt',
+//   date: '14.10.24',
+//   mileage: '267463',
+//   nextMaintMileage: '277463'
+// }
+// ]
+
+carNameEl.innerHTML = `
+  <div class="car-icon">
+    <img width="106px" height="53px" src="icons/car-icon.svg" alt="car">
+  </div>
+
+  <div class="car-name">${currentCar.carName}<span class="car-year"> ${currentCar.carYear}</span></div>
+  <div class="car-vin"><span class="car-vin--title">VIN: </span>${currentCar.carVin}</div>
+`;
 updateTime();
 function updateTime() {
   const now = new Date();
@@ -58,21 +85,37 @@ function updateTime() {
   `;
 }
 
+dropDownEl.addEventListener('click', () => {
+  dropDownListEl.classList.toggle('dropdown-list--open');
+  dropDownEl.classList.toggle('dropdown-block--open');
+  chevronIconEl.classList.toggle('chevron-icon--open');
+})
+
+
 jobTypeEl.forEach(jobType => {
   jobType.addEventListener('click', () => {
     chosenJob = jobType.innerText;
     choseNameEl.innerText = `${chosenJob}`;
-    saveToStorage('jobType',)
-    console.log(chosenJob)
+    // saveToStorage('jobType',)
   })
 })
 
-carNameEl.innerHTML = `
-  <div class="car-icon">
-    <img width="106px" height="53px" src="icons/car-icon.svg" alt="car">
-  </div>
+addBtnEl.addEventListener('click', () => {
+  jobDate = inputDateEl.value;
+  jobMileage = inputMileageEl.value;
 
-  <div class="car-name">${currentCar.carName}<span class="car-year"> ${currentCar.carYear}</span></div>
-  <div class="car-vin"><span class="car-vin--title">VIN: </span>${currentCar.carVin}</div>
-`;
+  
+
+  console.log(chosenJob);
+  console.log(jobDate);
+  console.log(jobMileage);
+
+  switch (chosenJob) {
+    case 'Замена масла двигателя': return console.log('oil');
+    case 'Замена ремня ГРМ': return console.log('belt');
+    case 'Замена цепи ГРМ': return console.log('chain');
+    case 'Замена фильтра салона': return console.log('filter1');
+    case 'Замена фильтра двигат.': return console.log('filter2');
+  }
+})
 
