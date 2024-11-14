@@ -11,13 +11,14 @@ const carNameEl = document.querySelector('.car-info-container');
 const inputDateEl = document.querySelector('.js-input-job-date');
 const inputMileageEl = document.querySelector('.js-input-mileage');
 const addBtnEl = document.querySelector('.js-add-car-btn');
+const errorMesnEl = document.querySelector('.js-error-message');
 
 const date = dayjs().format('D.MM.YY');
 const time = dayjs().format('HH:mm');
 const updTimeId = setInterval(updateTime, 15500);
 
 const clickedCarId = getFromStorage('clickedCarId');
-const getCars = getFromStorage('carsData');
+let getCars = getFromStorage('carsData');
 const currentCar = getCars[clickedCarId];
 
 let chosenJob;
@@ -25,8 +26,8 @@ let jobDate;
 let jobMileage;
 
 
-const carMaintData = {
-  type: 'oil',
+let carMaintData = {
+  chosenJob: 'Замена масла двигателя',
   date: '14.10.24',
   mileage: '267463',
   nextMaintDate: '14.10.24',
@@ -104,18 +105,35 @@ addBtnEl.addEventListener('click', () => {
   jobDate = inputDateEl.value;
   jobMileage = inputMileageEl.value;
 
-  
+  if (!chosenJob || !jobDate || !jobMileage) {
+    errorMesnEl.style.display = 'flex';
+  } else { errorMesnEl.style.display = 'none'; }
 
   console.log(chosenJob);
   console.log(jobDate);
   console.log(jobMileage);
+  console.log(getCars);
 
-  switch (chosenJob) {
-    case 'Замена масла двигателя': return console.log('oil');
-    case 'Замена ремня ГРМ': return console.log('belt');
-    case 'Замена цепи ГРМ': return console.log('chain');
-    case 'Замена фильтра салона': return console.log('filter1');
-    case 'Замена фильтра двигат.': return console.log('filter2');
+  carMaintData = {
+    chosenJob: `${chosenJob}`,
+    jobDate: `${jobDate}`,
+    jobMileage: `${jobMileage}`,
+    nextMaintDate: '14.10.24',
+    nextMaintMileage: '277463'
   }
+
+  getCars[clickedCarId].carMaintData.push(carMaintData);
+  // saveToStorage('carsData', getCars);
+
+  console.log(carMaintData);
+  console.log(getCars);
+
+  // switch (chosenJob) {
+  //   case 'Замена масла двигателя': return console.log('oil');
+  //   case 'Замена ремня ГРМ': return console.log('belt');
+  //   case 'Замена цепи ГРМ': return console.log('chain');
+  //   case 'Замена фильтра салона': return console.log('filter1');
+  //   case 'Замена фильтра двигат.': return console.log('filter2');
+  // }
 })
 

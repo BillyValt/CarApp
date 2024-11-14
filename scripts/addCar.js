@@ -16,6 +16,7 @@ addCarBtEl.addEventListener('click', () => {
   const carVin = vinInputEl.value;
 
   let carData = {
+    carMaintData: [],
     carName,
     carYear,
     carVin

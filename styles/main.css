@@ -207,6 +207,7 @@ li {
   border-bottom-right-radius: 20px;
   transform: translateY(100%);
   font-size: 20px;
+  z-index: 2;
 }
 .main .inputs-mileage .job-type {
   display: flex;
@@ -247,6 +248,18 @@ li {
   font-weight: 300;
   margin-top: 20px;
   cursor: pointer;
+}
+.main .input-mileage-container {
+  position: relative;
+}
+.main .error-message {
+  display: none;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  bottom: -24px;
+  left: 0;
+  color: rgb(255, 255, 255);
 }
 
 .main .history-title {

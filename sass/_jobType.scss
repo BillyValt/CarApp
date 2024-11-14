@@ -81,6 +81,7 @@
       border-bottom-right-radius: 20px;
       transform: translateY(100%);
       font-size: 20px;
+      z-index: 2;
     }
 
     .job-type {
@@ -117,6 +118,8 @@
         box-sizing: border-box;
         outline: none;
       }
+
+      
     }
 
     .add-car {
@@ -130,4 +133,20 @@
       cursor: pointer;
     }
   }
+
+  .input-mileage-container {
+    position: relative;
+  }
+
+  .error-message {
+    display: none;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    bottom: -24px;
+    left: 0;
+    color: rgb(255, 255, 255);
+  }
+
+  
 }
