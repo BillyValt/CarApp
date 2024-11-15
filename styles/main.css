@@ -287,12 +287,16 @@ li {
 .main .logs-container .log .log-name {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: start;
   color: rgb(255, 255, 255);
-  font-size: 27px;
+  font-size: 26px;
   text-align: center;
   margin-top: 20px;
+  margin-left: 13px;
   margin-bottom: 10px;
+}
+.main .logs-container .log .log-name :first-child {
+  margin-right: 7px;
 }
 .main .logs-container .log .log-date,
 .main .logs-container .log .log-next,
@@ -416,7 +420,7 @@ body {
   font-family: "Roboto Condensed";
   color: white;
   min-height: 100vh;
-  height: 2000px;
+  padding-bottom: 100px;
 }
 
 .main {
