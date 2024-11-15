@@ -74,8 +74,9 @@ li {
   font-size: 20px;
   text-transform: uppercase;
 }
-.main .car-list .no-cars {
+.main .no-cars {
   margin-top: 60px;
+  margin-bottom: 60px;
   font-size: 20px;
 }
 
