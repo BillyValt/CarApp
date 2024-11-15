@@ -123,7 +123,7 @@ addBtnEl.addEventListener('click', () => {
   }
 
   getCars[clickedCarId].carMaintData.push(carMaintData);
-  // saveToStorage('carsData', getCars);
+  saveToStorage('carsData', getCars);
 
   console.log(carMaintData);
   console.log(getCars);
