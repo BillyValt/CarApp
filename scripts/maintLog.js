@@ -75,7 +75,7 @@ function renderLogsList() {
 
   if (currentCar.carMaintData.length === 0) {
     logsContEl.innerHTML += `
-      <div class="no-cars js-no-cars">Нет добавленных автомобилей</div>
+      <div class="no-cars js-no-cars">Нет записей</div>
       `;
   } else if (getCars.length > 0) {
     currentCar.carMaintData.forEach(log => {
