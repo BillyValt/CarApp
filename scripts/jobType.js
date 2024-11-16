@@ -97,7 +97,9 @@ dropDownEl.addEventListener('click', () => {
 jobTypeEl.forEach(jobType => {
   jobType.addEventListener('click', () => {
     chosenJob = jobType.innerText;
-    choseNameEl.innerText = `${chosenJob}`;
+    choseNameEl.innerHTML = `
+    
+    ${chosenJob}`;
     // saveToStorage('jobType',)
   })
 })
