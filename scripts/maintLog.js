@@ -113,7 +113,7 @@ function renderLogsList() {
         logsContEl.innerHTML += `
       <div class="log">
         <div class="log-name log-name--yellow">
-          <img class="job-icon" src="icons/job icons/${iconName}.svg" alt="${iconName}" width="23" height="23">
+          <img class="job-icon" src="./icons/job icons/${iconName}.svg" alt="${iconName}" width="23" height="23">
           ${chosenJob}
         </div>
       <div class="log-date">Дата: ${jobDate}</div>
