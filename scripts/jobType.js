@@ -15,7 +15,7 @@ const errorMesnEl = document.querySelector('.js-error-message');
 
 const date = dayjs().format('D.MM.YY');
 const time = dayjs().format('HH:mm');
-const updTimeId = setInterval(updateTime, 15500);
+let updTimeId;
 
 const clickedCarId = getFromStorage('clickedCarId');
 let getCars = getFromStorage('carsData');
@@ -80,6 +80,7 @@ function updateTime() {
 
 
   clearInterval(updTimeId);
+  updTimeId = setInterval(updateTime, 15500);
 
   dateTimeEl.innerHTML = `
   ${date} ${time}

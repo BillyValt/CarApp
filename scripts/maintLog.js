@@ -16,7 +16,7 @@ const currentCar = getCars[clickedCarId];
 
 const date = dayjs().format('D.MM.YY');
 const time = dayjs().format('HH:mm');
-const updTimeId = setInterval(updateTime, 15500);
+let updTimeId;
 
 updateTime();
 function updateTime() {
@@ -39,9 +39,8 @@ function updateTime() {
   // }
   // ]
 
-
   clearInterval(updTimeId);
-
+  updTimeId = setInterval(updateTime, 15500);
 
   dateTimeEl.innerHTML = `
   ${date} ${time}
@@ -107,7 +106,7 @@ function renderLogsList() {
   }
 }
 
-clearLogBtn.addEventListener('click', ()=>{
+clearLogBtn.addEventListener('click', () => {
   currentCar.carMaintData.splice(0, currentCar.carMaintData.length);
 
   saveToStorage('carsData', getCars);
