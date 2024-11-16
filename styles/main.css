@@ -272,6 +272,8 @@ li {
   margin-bottom: 30px;
 }
 .main .logs-container {
+  display: flex;
+  flex-direction: column-reverse;
   margin-top: 20px;
 }
 .main .logs-container .log {

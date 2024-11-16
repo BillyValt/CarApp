@@ -10,6 +10,8 @@
   }
 
   .logs-container {
+    display: flex;
+    flex-direction: column-reverse;
     margin-top: 20px;
 
     .log {
