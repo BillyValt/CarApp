@@ -100,6 +100,7 @@ function renderLogsList() {
       console.log(chosenJob);
       console.log(jobDate);
       console.log(jobMileage);
+      console.log(iconName);
 
       if (currentCar.carMaintData.length > 0) {
         logsContEl.innerHTML += `
