@@ -44,6 +44,13 @@
       cursor: pointer;
     }
 
+    .choose-job {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      column-gap: 10px;
+    }
+
     .dropdown-block--open {
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
@@ -86,9 +93,10 @@
 
     .job-type {
       display: flex;
-      justify-content: center;
+      justify-content: start;
       align-items: center;
       padding: 21px 0px;
+      width: inherit;
 
     }
 
@@ -119,7 +127,7 @@
         outline: none;
       }
 
-      
+
     }
 
     .add-car {
@@ -148,5 +156,5 @@
     color: rgb(255, 255, 255);
   }
 
-  
+
 }

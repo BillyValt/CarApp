@@ -80,25 +80,12 @@ function renderLogsList() {
       const chosenJob = log.chosenJob;
       const jobDate = log.jobDate;
       const jobMileage = log.jobMileage;
+      const jobId = log.jobId;
       let iconName;
-
-      // if (index === 0) {
-      //   iconName = 'oil';
-      // } else if (index === 1) {
-      //   iconName = 'belt'
-      // } else if (index === 2) {
-      //   iconName = 'chain'
-      // } else if (index === 3) {
-      //   iconName = 'filter1'
-      // } else if (index === 4) {
-      //   iconName = 'filter'
-      // } else if (index === 5) {
-      //   iconName = 'sparkplug'
-      // } 
 
       console.log(iconName);
 
-      switch (index) {
+      switch (jobId) {
         case 0: iconName = 'oil';
           break;
         case 1: iconName = 'belt';

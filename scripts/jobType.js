@@ -26,14 +26,8 @@ let chosenJob;
 let jobDate;
 let jobMileage;
 
-
-let carMaintData = {
-  chosenJob: 'Замена масла двигателя',
-  date: '14.10.24',
-  mileage: '267463',
-  nextMaintDate: '14.10.24',
-  nextMaintMileage: '277463'
-};
+let iconName;
+let carMaintData = {};
 
 // const maintHistory = [{
 //   type: 'oil', 'belt', 'belt1', ''
@@ -94,14 +88,32 @@ dropDownEl.addEventListener('click', () => {
   chevronIconEl.classList.toggle('chevron-icon--open');
 })
 
-
-jobTypeEl.forEach(jobType => {
+jobTypeEl.forEach((jobType, index) => {
   jobType.addEventListener('click', () => {
+    jobId = index;
+
+    switch (index) {
+      case 0: iconName = 'oil';
+        break;
+      case 1: iconName = 'belt';
+        break;
+      case 2: iconName = 'chain';
+        break;
+      case 3: iconName = 'filter1';
+        break;
+      case 4: iconName = 'filter';
+        break;
+      case 5: iconName = 'sparkplug';
+        break;
+    }
+
+
     chosenJob = jobType.innerText;
     choseNameEl.innerHTML = `
-    
+    <img src="icons/job-icons/${iconName}.svg" alt="${iconName}" width="20" height="20">
     ${chosenJob}`;
     // saveToStorage('jobType',)
+
   })
 })
 
@@ -110,13 +122,18 @@ addBtnEl.addEventListener('click', () => {
   jobMileage = inputMileageEl.value;
 
   carMaintData = {
-    // jobId: `${}`,
-    chosenJob: `${chosenJob}`,
-    jobDate: `${jobDate}`,
-    jobMileage: `${jobMileage}`,
+    jobId,
+    chosenJob,
+    jobDate,
+    jobMileage,
     nextMaintDate: '14.10.24',
     nextMaintMileage: '277463'
   }
+
+  console.log(carMaintData.jobId);
+  console.log(carMaintData.jobDate);
+  console.log(carMaintData.chosenJob);
+  console.log(carMaintData.jobMileage);
 
   if (!chosenJob || !jobDate || !jobMileage) {
     errorMesnEl.style.display = 'flex';
@@ -126,17 +143,17 @@ addBtnEl.addEventListener('click', () => {
     saveToStorage('carsData', getCars);
   }
 
-  console.log(chosenJob);
-  console.log(jobDate);
-  console.log(jobMileage);
-  console.log(getCars);
+  // console.log(chosenJob);
+  // console.log(jobDate);
+  // console.log(jobMileage);
+  // console.log(getCars);
 
 
 
 
 
-  console.log(carMaintData);
-  console.log(getCars);
+  // console.log(carMaintData);
+  // console.log(getCars);
 
   // switch (chosenJob) {
   //   case 'Замена масла двигателя': return console.log('oil');
@@ -146,4 +163,5 @@ addBtnEl.addEventListener('click', () => {
   //   case 'Замена фильтра двигат.': return console.log('filter2');
   // }
 })
+
 

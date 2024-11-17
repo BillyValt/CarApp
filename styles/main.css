@@ -177,6 +177,12 @@ li {
   border-bottom-right-radius: 20px;
   cursor: pointer;
 }
+.main .inputs-mileage .choose-job {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  column-gap: 10px;
+}
 .main .inputs-mileage .dropdown-block--open {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
@@ -212,9 +218,10 @@ li {
 }
 .main .inputs-mileage .job-type {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   padding: 21px 0px;
+  width: inherit;
 }
 .main .inputs-mileage .job-name {
   padding-left: 10px;
@@ -300,7 +307,7 @@ li {
   font-size: 26px;
   text-align: center;
   margin-top: 20px;
-  margin-left: 13px;
+  margin-left: 31px;
   margin-bottom: 10px;
 }
 .main .logs-container .log .log-name :first-child {
