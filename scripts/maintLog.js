@@ -76,31 +76,28 @@ function renderLogsList() {
       <div class="no-cars js-no-cars">Нет записей</div>
       `;
   } else if (getCars.length > 0) {
-    currentCar.carMaintData.forEach(log => {
+    currentCar.carMaintData.forEach((log, index) => {
       const chosenJob = log.chosenJob;
       const jobDate = log.jobDate;
       const jobMileage = log.jobMileage;
       let iconName;
 
-      switch (chosenJob) {
-        case 'Замена масла двигателя': iconName = 'oil';
+      switch (index) {
+        case 0: iconName = 'oil';
         break;
-        case 'Замена ремня ГРМ': iconName = 'belt';
+        case 1: iconName = 'belt';
         break;
-        case 'Замена цепи ГРМ': iconName = 'chain';
+        case 2: iconName = 'chain';
         break;
-        case 'Замена фильтра салона': iconName = 'filter1';
+        case 3: iconName = 'filter1';
         break;
-        case 'Замена фильтра двигат.': iconName = 'filter';
+        case 4: iconName = 'filter';
         break;
-        case 'Замена свечей': iconName = 'sparkplug';
+        case 5: iconName = 'sparkplug';
         break;
       }
 
-      console.log(chosenJob);
-      console.log(jobDate);
-      console.log(jobMileage);
-      console.log(iconName);
+      console.log(index);
 
       if (currentCar.carMaintData.length > 0) {
         logsContEl.innerHTML += `
