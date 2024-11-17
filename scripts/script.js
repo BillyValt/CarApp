@@ -2,11 +2,11 @@ import { saveToStorage, getFromStorage, removeFromStorage } from './utils/saveTo
 
 const carListEl = document.querySelector('.car-list');
 const getCars = getFromStorage('carsData');
-
+// console.log(getCars);
 renderCarList();
 
 function renderCarList() {
-  if (getCars.length === 0 || !getCars) {
+  if (!getCars || getCars.length === 0) {
     carListEl.innerHTML += `
     <div class="no-cars js-no-cars">Нет добавленных автомобилей</div>
     `;

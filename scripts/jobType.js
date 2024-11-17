@@ -21,6 +21,7 @@ const clickedCarId = getFromStorage('clickedCarId');
 let getCars = getFromStorage('carsData');
 const currentCar = getCars[clickedCarId];
 
+let jobId;
 let chosenJob;
 let jobDate;
 let jobMileage;
@@ -109,6 +110,7 @@ addBtnEl.addEventListener('click', () => {
   jobMileage = inputMileageEl.value;
 
   carMaintData = {
+    // jobId: `${}`,
     chosenJob: `${chosenJob}`,
     jobDate: `${jobDate}`,
     jobMileage: `${jobMileage}`,

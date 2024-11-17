@@ -71,7 +71,7 @@ carNameEl.innerHTML = `
 
 renderLogsList();
 function renderLogsList() {
-  if (currentCar.carMaintData.length === 0 || !currentCar.carMaintData) {
+  if (!currentCar.carMaintData || currentCar.carMaintData.length === 0) {
     logsContEl.innerHTML += `
       <div class="no-cars js-no-cars">Нет записей</div>
       `;
@@ -82,34 +82,36 @@ function renderLogsList() {
       const jobMileage = log.jobMileage;
       let iconName;
 
-      if (index === 0) {
-        iconName = 'oil';
-      } else if (index === 1) {
-        iconName = 'belt'
-      } else if (index === 2) {
-        iconName = 'chain'
-      } else if (index === 3) {
-        iconName = 'filter1'
-      } else if (index === 4) {
-        iconName = 'filter'
-      } else if (index === 5) {
-        iconName = 'sparkplug'
-      } 
+      // if (index === 0) {
+      //   iconName = 'oil';
+      // } else if (index === 1) {
+      //   iconName = 'belt'
+      // } else if (index === 2) {
+      //   iconName = 'chain'
+      // } else if (index === 3) {
+      //   iconName = 'filter1'
+      // } else if (index === 4) {
+      //   iconName = 'filter'
+      // } else if (index === 5) {
+      //   iconName = 'sparkplug'
+      // } 
 
-      // switch (index) {
-      //   case 0: iconName = 'oil';
-      //     break;
-      //   case 1: iconName = 'belt';
-      //     break;
-      //   case 2: iconName = 'chain';
-      //     break;
-      //   case 3: iconName = 'filter1';
-      //     break;
-      //   case 4: iconName = 'filter';
-      //     break;
-      //   case 5: iconName = 'sparkplug';
-      //     break;
-      // }
+      console.log(iconName);
+
+      switch (index) {
+        case 0: iconName = 'oil';
+          break;
+        case 1: iconName = 'belt';
+          break;
+        case 2: iconName = 'chain';
+          break;
+        case 3: iconName = 'filter1';
+          break;
+        case 4: iconName = 'filter';
+          break;
+        case 5: iconName = 'sparkplug';
+          break;
+      }
 
       if (currentCar.carMaintData.length > 0) {
         logsContEl.innerHTML += `
