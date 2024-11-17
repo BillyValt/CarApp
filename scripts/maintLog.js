@@ -82,34 +82,46 @@ function renderLogsList() {
       const jobMileage = log.jobMileage;
       let iconName;
 
-      switch (index) {
-        case 0: iconName = 'oil';
-        break;
-        case 1: iconName = 'belt';
-        break;
-        case 2: iconName = 'chain';
-        break;
-        case 3: iconName = 'filter1';
-        break;
-        case 4: iconName = 'filter';
-        break;
-        case 5: iconName = 'sparkplug';
-        break;
-      }
+      if (index === 0) {
+        iconName = 'oil';
+      } else if (index === 1) {
+        iconName = 'belt'
+      } else if (index === 2) {
+        iconName = 'chain'
+      } else if (index === 3) {
+        iconName = 'filter1'
+      } else if (index === 4) {
+        iconName = 'filter'
+      } else if (index === 5) {
+        iconName = 'sparkplug'
+      } 
 
-      console.log(index);
+      // switch (index) {
+      //   case 0: iconName = 'oil';
+      //     break;
+      //   case 1: iconName = 'belt';
+      //     break;
+      //   case 2: iconName = 'chain';
+      //     break;
+      //   case 3: iconName = 'filter1';
+      //     break;
+      //   case 4: iconName = 'filter';
+      //     break;
+      //   case 5: iconName = 'sparkplug';
+      //     break;
+      // }
 
       if (currentCar.carMaintData.length > 0) {
         logsContEl.innerHTML += `
-      <div class="log">
-        <div class="log-name">
-          <img class="job-icon" src="icons/job-icons/${iconName}.svg" alt="${iconName}">
-          ${chosenJob}
+        <div class="log">
+          <div class="log-name">
+            <img class="job-icon" src="icons/job-icons/${iconName}.svg" alt="${iconName}">
+            ${chosenJob}
+          </div>
+        <div class="log-date">Дата: ${jobDate}</div>
+        <div class="log-mileage">Пробег: ${jobMileage}км</div>
+        <div class="log-next">Замените: 14.10.2025/ 277463км</div>
         </div>
-      <div class="log-date">Дата: ${jobDate}</div>
-      <div class="log-mileage">Пробег: ${jobMileage}км</div>
-      <div class="log-next">Замените: 14.10.2025/ 277463км</div>
-      </div>
       `}
     })
   }

@@ -6,7 +6,11 @@ const getCars = getFromStorage('carsData');
 renderCarList();
 
 function renderCarList() {
-  if (getCars.length > 0) {
+  if (getCars.length === 0 || !getCars) {
+    carListEl.innerHTML += `
+    <div class="no-cars js-no-cars">Нет добавленных автомобилей</div>
+    `;
+  } else if (getCars.length > 0) {
     getCars.forEach((carInfo, index) => {
       let carNum = index + 1;
       const { carName, carYear, carVin } = carInfo;
@@ -24,10 +28,6 @@ function renderCarList() {
       `;
 
     });
-  } else if (getCars.length === 0 || !getCars) {
-    carListEl.innerHTML += `
-    <div class="no-cars js-no-cars">Нет добавленных автомобилей</div>
-    `;
   }
 }
 
