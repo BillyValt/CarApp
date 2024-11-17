@@ -97,14 +97,6 @@ function renderLogsList() {
         break;
       }
 
-      // if (chosenJob === 'Замена масла двигателя') {
-      //   iconName = 'oil';
-      // } else if (chosenJob === 'Замена ремня ГРМ') {
-      //   iconName = 'chain';
-      // } else if (chosenJob === 'Замена ремня ГРМ') {
-      //   iconName = 'chain';
-      // }
-
       console.log(chosenJob);
       console.log(jobDate);
       console.log(jobMileage);
@@ -112,8 +104,8 @@ function renderLogsList() {
       if (currentCar.carMaintData.length > 0) {
         logsContEl.innerHTML += `
       <div class="log">
-        <div class="log-name log-name--yellow">
-          <img class="job-icon" src="icons/jobIcons/${iconName}.svg" alt="${iconName}" width="23" height="23">
+        <div class="log-name">
+          <img class="job-icon" src="icons/jobIcons/${iconName}.svg" alt="${iconName}">
           ${chosenJob}
         </div>
       <div class="log-date">Дата: ${jobDate}</div>

@@ -108,15 +108,6 @@ addBtnEl.addEventListener('click', () => {
   jobDate = inputDateEl.value;
   jobMileage = inputMileageEl.value;
 
-  if (!chosenJob || !jobDate || !jobMileage) {
-    errorMesnEl.style.display = 'flex';
-  } else { errorMesnEl.style.display = 'none'; }
-
-  console.log(chosenJob);
-  console.log(jobDate);
-  console.log(jobMileage);
-  console.log(getCars);
-
   carMaintData = {
     chosenJob: `${chosenJob}`,
     jobDate: `${jobDate}`,
@@ -125,8 +116,22 @@ addBtnEl.addEventListener('click', () => {
     nextMaintMileage: '277463'
   }
 
-  getCars[clickedCarId].carMaintData.push(carMaintData);
-  saveToStorage('carsData', getCars);
+  if (!chosenJob || !jobDate || !jobMileage) {
+    errorMesnEl.style.display = 'flex';
+  } else {
+    errorMesnEl.style.display = 'none';
+    getCars[clickedCarId].carMaintData.push(carMaintData);
+    saveToStorage('carsData', getCars);
+  }
+
+  console.log(chosenJob);
+  console.log(jobDate);
+  console.log(jobMileage);
+  console.log(getCars);
+
+
+
+
 
   console.log(carMaintData);
   console.log(getCars);
