@@ -71,7 +71,7 @@ carNameEl.innerHTML = `
 
 renderLogsList();
 function renderLogsList() {
-  if (currentCar.carMaintData.length === 0) {
+  if (currentCar.carMaintData.length === 0 || !currentCar.carMaintData) {
     logsContEl.innerHTML += `
       <div class="no-cars js-no-cars">Нет записей</div>
       `;

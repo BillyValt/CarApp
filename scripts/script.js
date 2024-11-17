@@ -24,13 +24,12 @@ function renderCarList() {
       `;
 
     });
-  } else if (getCars.length === 0) {
+  } else if (getCars.length === 0 || !getCars) {
     carListEl.innerHTML += `
     <div class="no-cars js-no-cars">Нет добавленных автомобилей</div>
     `;
   }
 }
-
 
 const carLogEl = document.querySelectorAll('.car-log');
 
