@@ -6,6 +6,10 @@ const removeBtn = document.querySelector('.remove-btn');
 const dateTimeEl = document.querySelector('.date-time');
 const carNameEl = document.querySelector('.car-info-container');
 const logsContEl = document.querySelector('.logs-container');
+const carRemovedEl = document.querySelector('.car-removed-notif');
+const dialogueEl = document.querySelector('.car-remove-dialogue');
+const dialYesBtn = document.querySelector('.js-yes-btn');
+const dialNoBtn = document.querySelector('.js-no-btn');
 //FOR SERVICE ONLY
 const clearLogBtn = document.querySelector('.js-clear-log');
 
@@ -48,13 +52,20 @@ function updateTime() {
 }
 
 removeBtn.addEventListener('click', () => {
-  const newCarsList = getCars.slice();
+  dialogueEl.classList.add('car-remove-dialogue--open');
 
-  newCarsList.splice(clickedCarId, 1);
+  dialYesBtn.addEventListener('click', () => {
+    const newCarsList = getCars.slice();
+    newCarsList.splice(clickedCarId, 1);
+    saveToStorage('carsData', newCarsList);
+    dialogueEl.classList.remove('car-remove-dialogue--open');
+    carRemovedEl.classList.add('car-removed-notif--open');
 
-  console.log(newCarsList);
-
-  saveToStorage('carsData', newCarsList);
+    setTimeout(() => { window.open('index.html', '_self') }, 1200);
+  })
+  dialNoBtn.addEventListener('click', () => {
+    dialogueEl.classList.remove('car-remove-dialogue--open');
+  })
 })
 
 console.log(clickedCarId);
@@ -121,3 +132,4 @@ clearLogBtn.addEventListener('click', () => {
 
   saveToStorage('carsData', getCars);
 })
+
