@@ -113,6 +113,10 @@ function renderLogsList() {
           break;
         case 5: iconName = 'sparkplug';
           break;
+        case 6: iconName = 'fuel';
+          break;
+        case 7: iconName = 'belt1';
+          break;
       }
 
       if (currentCar.carMaintData.length > 0) {
