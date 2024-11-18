@@ -224,7 +224,7 @@ li {
 .main .inputs-mileage .dropdown-list--open {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: start;
   position: absolute;
   bottom: -5px;
@@ -236,7 +236,7 @@ li {
   transform: translateY(100%);
   font-size: 20px;
   z-index: 2;
-  height: 400px;
+  height: 300px;
   overflow: scroll;
 }
 .main .inputs-mileage .job-type {
