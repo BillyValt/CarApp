@@ -6,6 +6,10 @@ const yearInputEl = document.querySelector('.js-year-input');
 yearInputEl.value = 2000;
 const vinInputEl = document.querySelector('.js-vin-input');
 const addCarBtEl = document.querySelector('.js-add-car-bt');
+const carAddedEl = document.querySelector('.car-added-notif');
+
+const getCars = getFromStorage('carsData');
+let addedCarId = getCars.length;
 
 let carsData = getFromStorage('carsData') || [];
 // saveToStorage('carsData', carsData);
@@ -14,6 +18,8 @@ addCarBtEl.addEventListener('click', () => {
   const carName = carBrandInputEl.value;
   const carYear = yearInputEl.value;
   const carVin = vinInputEl.value;
+
+  saveToStorage('clickedCarId', addedCarId);
 
   let carData = {
     carMaintData: [],
@@ -30,11 +36,9 @@ addCarBtEl.addEventListener('click', () => {
   yearInputEl.value = '';
   vinInputEl.value = '';
 
-  console.log(carName);
-  console.log(carYear);
-  console.log(carVin);
-
-  console.log(carsData);
-  console.log(carName);
+  carAddedEl.classList.add('car-added-notif--open');
+  setTimeout(() => (
+    carAddedEl.classList.remove('car-added-notif--open'), window.open('maintLog.html', '_self')
+  ), 1200);
 })
 

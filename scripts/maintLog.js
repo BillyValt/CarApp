@@ -8,6 +8,7 @@ const carNameEl = document.querySelector('.car-info-container');
 const logsContEl = document.querySelector('.logs-container');
 const carRemovedEl = document.querySelector('.car-removed-notif');
 const dialogueEl = document.querySelector('.car-remove-dialogue');
+const dialCarNameEl = document.querySelector('.js-dialogue-carname');
 const dialYesBtn = document.querySelector('.js-yes-btn');
 const dialNoBtn = document.querySelector('.js-no-btn');
 //FOR SERVICE ONLY
@@ -17,6 +18,8 @@ const clearLogBtn = document.querySelector('.js-clear-log');
 const clickedCarId = getFromStorage('clickedCarId');
 const getCars = getFromStorage('carsData');
 const currentCar = getCars[clickedCarId];
+const currentCarName = currentCar.carName;
+const currentCarYear = currentCar.carYear;
 
 const date = dayjs().format('D.MM.YY');
 const time = dayjs().format('HH:mm');
@@ -53,6 +56,7 @@ function updateTime() {
 
 removeBtn.addEventListener('click', () => {
   dialogueEl.classList.add('car-remove-dialogue--open');
+  dialCarNameEl.innerHTML = `${currentCarName} ${currentCarYear}`;
 
   dialYesBtn.addEventListener('click', () => {
     const newCarsList = getCars.slice();

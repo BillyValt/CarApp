@@ -23,7 +23,6 @@
       padding: 0px 0px 20px 0px;
       max-width: 320px;
       height: 230px;
-      // box-shadow: $cardShadow;
       overflow: hidden;
 
       .job-icon {
@@ -49,15 +48,6 @@
         }
       }
 
-      // .log-name--yellow {
-
-
-      // }
-
-      // .log-name--blue {
-      //   color: lightcoral;
-      // }
-
       .log-date,
       .log-next,
       .log-mileage {
@@ -65,7 +55,6 @@
         font-size: 23px;
         padding-top: 13px;
         padding-left: 31px;
-        // letter-spacing: 1.3px;
       }
 
       .log-next {
@@ -91,7 +80,6 @@
     border-radius: 40px;
     padding: 9px 20px;
     cursor: pointer;
-    // box-shadow: $cardShadow;
   }
 
   .car-removed-notif {
@@ -108,7 +96,6 @@
     left: 50%;
     border-radius: 30px;
     transform: translate(-50%, -50%);
-    // height: 190px;
     background-color: rgba(221, 42, 45, 0.91);
 
     &--open {
@@ -128,10 +115,8 @@
     font-size: 25px;
     background-color: $lightblue;
     border-radius: 30px;
-    // padding: 20px;
     width: 375px;
     height: 120px;
-    // row-gap: 20px;
     overflow: hidden;
 
     &--open {
@@ -156,7 +141,6 @@
         color: white;
         font-size: 25px;
         background-color: transparent;
-        // border: 1px solid white;
         border: none;
         width: 100%;
         cursor: pointer;
