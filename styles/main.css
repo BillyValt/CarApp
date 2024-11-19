@@ -106,6 +106,7 @@ li {
 }
 .main .inputs-block .input-container {
   margin-bottom: 10px;
+  position: relative;
 }
 .main .inputs-block .input-container .inp-title {
   color: white;
@@ -124,6 +125,18 @@ li {
 }
 .main .inputs-block .input-container .js-vin-input {
   text-transform: uppercase;
+}
+.main .inputs-block .input-container .error-message-car {
+  display: none;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  bottom: -24px;
+  left: 0;
+  color: rgb(255, 255, 255);
+}
+.main .inputs-block .input-container .error-message-car--open {
+  display: flex;
 }
 .main .inputs-block .add-car {
   border: 1px solid white;
@@ -144,7 +157,7 @@ li {
   font-size: 30px;
   padding: 18px 42px;
   align-items: center;
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

@@ -13,6 +13,7 @@
 
     .input-container {
       margin-bottom: 10px;
+      position: relative;
 
       .inp-title {
         color: white;
@@ -35,7 +36,23 @@
       .js-vin-input {
         text-transform: uppercase;
       }
+
+      .error-message-car {
+        display: none;
+        justify-content: center;
+        width: 100%;
+        position: absolute;
+        bottom: -24px;
+        left: 0;
+        color: rgb(255, 255, 255);
+
+        &--open {
+          display: flex;
+        }
+      }
     }
+
+   
 
     .add-car {
       // background-color: #5959a7;
@@ -59,7 +76,7 @@
     font-size: 30px;
     padding: 18px 42px;
     align-items: center;
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
