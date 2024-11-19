@@ -98,8 +98,6 @@ function renderLogsList() {
       const jobId = log.jobId;
       let iconName;
 
-      console.log(iconName);
-
       switch (jobId) {
         case 0: iconName = 'oil';
           break;
@@ -118,6 +116,7 @@ function renderLogsList() {
         case 7: iconName = 'belt1';
           break;
       }
+      console.log(iconName);
 
       if (currentCar.carMaintData.length > 0) {
         logsContEl.innerHTML += `

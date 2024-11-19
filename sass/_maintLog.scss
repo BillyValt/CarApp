@@ -88,7 +88,7 @@
     align-items: center;
     white-space: nowrap;
     font-size: 30px;
-    position: absolute;
+    position: fixed;
     padding: 18px 42px;
     width: fit-content;
     height: fit-content;
@@ -108,7 +108,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
