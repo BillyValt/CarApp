@@ -1,4 +1,5 @@
 import { saveToStorage, getFromStorage } from './utils/saveToStorage.js';
+import { updateTime } from './utils/navDate.js';
 import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
 
 const dropDownEl = document.querySelector('.dropdown-block');
@@ -12,10 +13,7 @@ const inputDateEl = document.querySelector('.js-input-job-date');
 const inputMileageEl = document.querySelector('.js-input-mileage');
 const addBtnEl = document.querySelector('.js-add-car-btn');
 const errorMesnEl = document.querySelector('.js-error-message');
-
-const date = dayjs().format('D.MM.YY');
-const time = dayjs().format('HH:mm');
-let updTimeId;
+const jobAddedNotif = document.querySelector('.car-added-notif');
 
 const clickedCarId = getFromStorage('clickedCarId');
 let getCars = getFromStorage('carsData');
@@ -29,20 +27,6 @@ let jobMileage;
 let iconName;
 let carMaintData = {};
 
-// const maintHistory = [{
-//   type: 'oil', 'belt', 'belt1', ''
-//   date: '14.10.24',
-//   mileage: '267463',
-//   nextMaintDate: '14.10.24',
-//   nextMaintMileage: '277463'
-// }, {
-//   type: 'belt',
-//   date: '14.10.24',
-//   mileage: '267463',
-//   nextMaintMileage: '277463'
-// }
-// ]
-
 carNameEl.innerHTML = `
   <div class="car-icon">
     <img width="106px" height="53px" src="icons/car-icon.svg" alt="car">
@@ -52,35 +36,6 @@ carNameEl.innerHTML = `
   <div class="car-vin"><span class="car-vin--title">VIN: </span>${currentCar.carVin}</div>
 `;
 updateTime();
-function updateTime() {
-  const now = new Date();
-  const hours = String(now.getHours()).padStart(2, '0');
-  const minutes = String(now.getMinutes()).padStart(2, '0');
-  const time = `${hours}:${minutes}`;
-
-
-  // const maintHistory = [{
-  //   type: 'oil',
-  //   date: '14.10.24',
-  //   mileage: '267463',
-  //   nextMaintDate: '14.10.24',
-  //   nextMaintMileage: '277463'
-  // }, {
-  //   type: 'belt',
-  //   date: '14.10.24',
-  //   mileage: '267463',
-  //   nextMaintMileage: '277463'
-  // }
-  // ]
-
-
-  clearInterval(updTimeId);
-  updTimeId = setInterval(updateTime, 15500);
-
-  dateTimeEl.innerHTML = `
-  ${date} ${time}
-  `;
-}
 
 dropDownEl.addEventListener('click', () => {
   dropDownListEl.classList.toggle('dropdown-list--open');
@@ -122,7 +77,7 @@ jobTypeEl.forEach((jobType, index) => {
 })
 
 addBtnEl.addEventListener('click', () => {
-  jobDate = inputDateEl.value;
+  // jobDate = inputDateEl.value;
   jobMileage = inputMileageEl.value;
 
   carMaintData = {
@@ -145,27 +100,26 @@ addBtnEl.addEventListener('click', () => {
     errorMesnEl.style.display = 'none';
     getCars[clickedCarId].carMaintData.push(carMaintData);
     saveToStorage('carsData', getCars);
+    jobAddedNotif.classList.add('car-added-notif--open');
+
+    setTimeout(() => (
+      jobAddedNotif.classList.remove('car-added-notif--open'), window.open('maintLog.html', '_self')
+    ), 1200);
   }
-
-  // console.log(chosenJob);
-  // console.log(jobDate);
-  // console.log(jobMileage);
-  // console.log(getCars);
-
-
-
-
-
-  // console.log(carMaintData);
-  // console.log(getCars);
-
-  // switch (chosenJob) {
-  //   case 'Замена масла двигателя': return console.log('oil');
-  //   case 'Замена ремня ГРМ': return console.log('belt');
-  //   case 'Замена цепи ГРМ': return console.log('chain');
-  //   case 'Замена фильтра салона': return console.log('filter1');
-  //   case 'Замена фильтра двигат.': return console.log('filter2');
-  // }
 })
+
+const monthsShort = ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Нояб', 'Дек'];
+
+inputDateEl.addEventListener('change', event => {
+  const date = new Date(event.target.value);
+  if (!isNaN(date)) {
+    const day = date.getDate();
+    const month = monthsShort[date.getMonth()];
+    const year = date.getFullYear();
+
+    jobDate = `${day} ${month} ${year}`;
+  }
+})
+
 
 

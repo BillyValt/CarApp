@@ -257,7 +257,7 @@ li {
   justify-content: start;
   align-items: center;
   padding: 21px 0px;
-  min-width: inherit;
+  width: inherit;
 }
 .main .inputs-mileage .job-name {
   padding-left: 10px;
@@ -352,15 +352,14 @@ li {
 .main .logs-container .log .log-date,
 .main .logs-container .log .log-next,
 .main .logs-container .log .log-mileage {
-  color: rgb(220, 220, 220);
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   font-size: 23px;
   padding-top: 13px;
   padding-left: 31px;
 }
 .main .logs-container .log .log-next {
-  font-size: 24px;
-  font-weight: 400;
-  color: #ffca26;
+  font-size: 23px;
   padding-bottom: 60px;
 }
 .main .remove-btn {

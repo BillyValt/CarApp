@@ -1,5 +1,6 @@
 import { saveToStorage, getFromStorage, removeFromStorage } from './utils/saveToStorage.js';
 import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
+import { updateTime } from './utils/navDate.js';
 
 
 const removeBtn = document.querySelector('.remove-btn');
@@ -26,33 +27,6 @@ const time = dayjs().format('HH:mm');
 let updTimeId;
 
 updateTime();
-function updateTime() {
-  const now = new Date();
-  const hours = String(now.getHours()).padStart(2, '0');
-  const minutes = String(now.getMinutes()).padStart(2, '0');
-  const time = `${hours}:${minutes}`;
-
-  // const maintHistory = [{
-  //   type: 'oil',
-  //   date: '14.10.24',
-  //   mileage: '267463',
-  //   nextMaintDate: '14.10.24',
-  //   nextMaintMileage: '277463'
-  // }, {
-  //   type: 'belt',
-  //   date: '14.10.24',
-  //   mileage: '267463',
-  //   nextMaintMileage: '277463'
-  // }
-  // ]
-
-  clearInterval(updTimeId);
-  updTimeId = setInterval(updateTime, 15500);
-
-  dateTimeEl.innerHTML = `
-  ${date} ${time}
-  `;
-}
 
 removeBtn.addEventListener('click', () => {
   dialogueEl.classList.add('car-remove-dialogue--open');
@@ -127,7 +101,7 @@ function renderLogsList() {
           </div>
         <div class="log-date">Дата: ${jobDate}</div>
         <div class="log-mileage">Пробег: ${jobMileage}км</div>
-        <div class="log-next">Замените: 14.10.2025/ 277463км</div>
+        <div class="log-next">Замените: 14Нояб 2025/ 277463км</div>
         </div>
       `}
     })
@@ -139,4 +113,6 @@ clearLogBtn.addEventListener('click', () => {
 
   saveToStorage('carsData', getCars);
 })
+
+
 

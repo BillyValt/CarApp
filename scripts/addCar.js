@@ -1,5 +1,5 @@
 import { saveToStorage, getFromStorage } from "./utils/saveToStorage.js";
-// import { carsData } from "/scripts/carsData.js";
+import { updateTime } from './utils/navDate.js';
 
 const carBrandInputEl = document.querySelector('.js-addcar-input');
 const yearInputEl = document.querySelector('.js-year-input');
@@ -14,8 +14,8 @@ const getCars = getFromStorage('carsData');
 let addedCarId = getCars.length;
 
 let carsData = getFromStorage('carsData') || [];
-// saveToStorage('carsData', carsData);
 
+updateTime();
 addCarBtEl.addEventListener('click', () => {
   const carName = carBrandInputEl.value;
   const carYear = yearInputEl.value;
