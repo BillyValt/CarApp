@@ -35,18 +35,25 @@
       background: $itemBackgr;
       display: flex;
       font-size: 22px;
-      justify-content: space-evenly;
+      justify-content: space-between;
+      column-gap: 10px;
       width: 340px;
       margin-top: 25px;
       cursor: pointer;
-      padding: 15px 20px 15px 10px;
+      // padding: 15px 20px 15px 10px;
+      padding-right: 0px;
       border-radius: 30px;
+      background-color: white;
+      overflow: hidden;
 
       .number {
         display: flex;
+        justify-content: center;
         align-items: center;
         font-size: 28px;
-        padding-right: 30px;
+        // padding-right: 30px;
+        background-color: $lightblue;
+        width: 47px;
       }
 
       .car-info {
@@ -55,18 +62,21 @@
         align-items: start;
         max-width: 250px;
         width: 100%;
+        color: #2A2A2A;
+        margin: 15px 20px 15px 0px;
       }
 
       .car-name {
         font-size: 25px;
         padding-bottom: 2px;
-        font-weight: bold;
+        font-weight: normal;
       }
 
       .car-vin {
         color: $pink;
         font-size: 20px;
-       text-transform: uppercase;
+        text-transform: uppercase;
+        color: #5D5D5D;
       }
     }
   }
