@@ -117,7 +117,7 @@ inputDateEl.addEventListener('change', event => {
     const month = monthsShort[date.getMonth()];
     const year = date.getFullYear();
 
-    jobDate = `${day} ${month} ${year}`;
+    jobDate = `${day}${month} ${year}`;
   }
 })
 

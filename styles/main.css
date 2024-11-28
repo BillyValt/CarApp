@@ -332,11 +332,14 @@ li {
   position: relative;
   background: #0c3c66;
   border-radius: 30px;
-  padding: 20px 0px;
   padding: 0px 0px 20px 0px;
-  max-width: 320px;
+  max-width: 360px;
   height: 230px;
   overflow: hidden;
+  font-weight: 300;
+}
+.main .logs-container .log img {
+  width: 28px;
 }
 .main .logs-container .log .job-icon {
   width: 23px;
@@ -350,9 +353,9 @@ li {
   color: rgb(255, 255, 255);
   font-size: 26px;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 14px;
   margin-left: 31px;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 }
 .main .logs-container .log .log-name :first-child {
   margin-right: 7px;
@@ -360,11 +363,16 @@ li {
 .main .logs-container .log .log-date,
 .main .logs-container .log .log-next,
 .main .logs-container .log .log-mileage {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
+  color: #2A2A2A;
   font-size: 23px;
-  padding-top: 13px;
-  padding-left: 31px;
+  padding: 15px 19px 0 19px;
+  width: inherit;
+  position: relative;
 }
 .main .logs-container .log .log-next {
   font-size: 23px;

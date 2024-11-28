@@ -99,9 +99,9 @@ function renderLogsList() {
             <img class="job-icon" src="icons/job-icons/${iconName}.svg" alt="${iconName}">
             ${chosenJob}
           </div>
-        <div class="log-date">Дата: ${jobDate}</div>
-        <div class="log-mileage">Пробег: ${jobMileage}км</div>
-        <div class="log-next">Замените: 14Нояб 2025/ 277463км</div>
+          <div class="log-date"><img src="icons/card-icons/calendar.svg"> ${jobDate}</div>
+          <div class="log-mileage"><img src="icons/card-icons/speedometer.svg"> ${jobMileage}км</div>
+          <div class="log-next"><img src="icons/card-icons/repeat.svg">14Нояб 2025/ 277463км</div>
         </div>
       `}
     })
