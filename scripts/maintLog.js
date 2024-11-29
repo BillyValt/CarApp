@@ -10,6 +10,7 @@ const logsContEl = document.querySelector('.logs-container');
 const carRemovedEl = document.querySelector('.car-removed-notif');
 const dialogueEl = document.querySelector('.car-remove-dialogue');
 const dialCarNameEl = document.querySelector('.js-dialogue-carname');
+const iconBackgEl = document.querySelector('.job-icon-container');
 const dialYesBtn = document.querySelector('.js-yes-btn');
 const dialNoBtn = document.querySelector('.js-no-btn');
 //FOR SERVICE ONLY
@@ -71,40 +72,47 @@ function renderLogsList() {
       const jobMileage = log.jobMileage;
       const jobId = log.jobId;
       let iconName;
+      let iconBackrColor;
 
       switch (jobId) {
-        case 0: iconName = 'oil';
+        case 0: iconName = 'oil'; iconBackrColor = '#4FC3F7';
           break;
-        case 1: iconName = 'belt';
+        case 1: iconName = 'belt'; iconBackrColor = '#A4C639';
           break;
-        case 2: iconName = 'chain';
+        case 2: iconName = 'chain'; iconBackrColor = '#FFEB3B';
           break;
-        case 3: iconName = 'filter1';
+        case 3: iconName = 'filter1'; iconBackrColor = '#FF7043';
           break;
-        case 4: iconName = 'filter';
+        case 4: iconName = 'filter'; iconBackrColor = '#FFA726';
           break;
-        case 5: iconName = 'sparkplug';
+        case 5: iconName = 'sparkplug'; iconBackrColor = '#26C6DA';
           break;
-        case 6: iconName = 'fuel';
+        case 6: iconName = 'fuel'; iconBackrColor = '#BA68C8';
           break;
-        case 7: iconName = 'belt1';
+        case 7: iconName = 'belt1'; iconBackrColor = '#FFAB91';
           break;
       }
       console.log(iconName);
+      console.log(iconBackrColor);
 
       if (currentCar.carMaintData.length > 0) {
         logsContEl.innerHTML += `
         <div class="log">
           <div class="log-name">
-            <img class="job-icon" src="icons/job-icons/${iconName}.svg" alt="${iconName}">
+          <div class="job-icon-container job-icon-container--col${jobId}">
+               <img class="job-icon" src="icons/job-icons/${iconName}.svg" alt="${iconName}">
+          </div>
+       
             ${chosenJob}
           </div>
           <div class="log-date"><img src="icons/card-icons/calendar.svg"> ${jobDate}</div>
           <div class="log-mileage"><img src="icons/card-icons/speedometer.svg"> ${jobMileage}км</div>
-          <div class="log-next"><img src="icons/card-icons/repeat.svg">14Нояб 2025/ 277463км</div>
+          <div class="log-next"><img src="icons/card-icons/repeat.svg">14нояб 2025| 277463км</div>
         </div>
-      `}
+      `;
+      }
     })
+
   }
 }
 

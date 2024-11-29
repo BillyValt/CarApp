@@ -29,11 +29,56 @@
         width: 28px;
       }
 
+      .job-icon-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        background-color: #FFAB91;
+        border-radius: 100px;
+        margin-right: 10px;
+      }
+
+      .job-icon-container--col0 {
+        background-color: #4FC3F7;
+      }
+
+      .job-icon-container--col1 {
+        background-color: #A4C639;
+      }
+
+      .job-icon-container--col2 {
+        background-color: #FFEB3B;
+      }
+
+      .job-icon-container--col3 {
+        background-color: #FF7043;
+      }
+
+      .job-icon-container--col4 {
+        background-color: #26C6DA;
+      }
+
+      .job-icon-container--col5 {
+        background-color: #FFA726;
+      }
+
+      .job-icon-container--col6 {
+        background-color: #BA68C8;
+      }
+
+      .job-icon-container--col7 {
+        background-color: #FFAB91;
+      }
+
       .job-icon {
-        width: 23px;
-        height: 23px;
-        filter: invert(80%) sepia(80%) saturate(3132%) hue-rotate(334deg) brightness(105%) contrast(98%);
-        ;
+        width: 27px;
+        height: 27px;
+        // filter: invert(80%) sepia(80%) saturate(3132%) hue-rotate(334deg) brightness(105%) contrast(98%);
+        // filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(142deg) brightness(119%) contrast(115%);
+
+
       }
 
       .log-name {
@@ -46,10 +91,6 @@
         margin-top: 14px;
         margin-left: 31px;
         margin-bottom: 14px;
-
-        :first-child {
-          margin-right: 7px;
-        }
       }
 
       .log-date,

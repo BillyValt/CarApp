@@ -53,6 +53,8 @@ li {
   border-radius: 30px;
   background-color: white;
   overflow: hidden;
+  box-shadow: 0px 0px 5px 17px rgba(0, 0, 0, 0.14);
+  box-shadow: 0px 0px 10px 17px rgba(0, 94, 172, 0.1);
 }
 .main .car-list .car-log .number {
   display: flex;
@@ -341,10 +343,43 @@ li {
 .main .logs-container .log img {
   width: 28px;
 }
+.main .logs-container .log .job-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #FFAB91;
+  border-radius: 100px;
+  margin-right: 10px;
+}
+.main .logs-container .log .job-icon-container--col0 {
+  background-color: #4FC3F7;
+}
+.main .logs-container .log .job-icon-container--col1 {
+  background-color: #A4C639;
+}
+.main .logs-container .log .job-icon-container--col2 {
+  background-color: #FFEB3B;
+}
+.main .logs-container .log .job-icon-container--col3 {
+  background-color: #FF7043;
+}
+.main .logs-container .log .job-icon-container--col4 {
+  background-color: #26C6DA;
+}
+.main .logs-container .log .job-icon-container--col5 {
+  background-color: #FFA726;
+}
+.main .logs-container .log .job-icon-container--col6 {
+  background-color: #BA68C8;
+}
+.main .logs-container .log .job-icon-container--col7 {
+  background-color: #FFAB91;
+}
 .main .logs-container .log .job-icon {
-  width: 23px;
-  height: 23px;
-  filter: invert(80%) sepia(80%) saturate(3132%) hue-rotate(334deg) brightness(105%) contrast(98%);
+  width: 27px;
+  height: 27px;
 }
 .main .logs-container .log .log-name {
   display: flex;
@@ -356,9 +391,6 @@ li {
   margin-top: 14px;
   margin-left: 31px;
   margin-bottom: 14px;
-}
-.main .logs-container .log .log-name :first-child {
-  margin-right: 7px;
 }
 .main .logs-container .log .log-date,
 .main .logs-container .log .log-next,

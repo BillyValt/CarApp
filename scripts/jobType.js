@@ -108,7 +108,7 @@ addBtnEl.addEventListener('click', () => {
   }
 })
 
-const monthsShort = ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Нояб', 'Дек'];
+const monthsShort = ['янв', 'фев', 'мар', 'апр', 'май', 'июн', 'июл', 'авг', 'сен', 'окт', 'нояб', 'дек'];
 
 inputDateEl.addEventListener('change', event => {
   const date = new Date(event.target.value);
