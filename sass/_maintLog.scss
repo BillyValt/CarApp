@@ -43,24 +43,31 @@
       .job-icon-container--col0 {
         background-color: #4FC3F7;
       }
+
       .job-icon-container--col1 {
         background-color: #A4C639;
       }
+
       .job-icon-container--col2 {
         background-color: #FFEB3B;
       }
+
       .job-icon-container--col3 {
         background-color: #FF7043;
       }
+
       .job-icon-container--col4 {
         background-color: #26C6DA;
       }
+
       .job-icon-container--col5 {
         background-color: #FFA726;
       }
+
       .job-icon-container--col6 {
         background-color: #BA68C8;
       }
+
       .job-icon-container--col7 {
         background-color: #FFAB91;
       }
@@ -196,6 +203,52 @@
         cursor: pointer;
       }
     }
+  }
+
+  .card-remove-dialogue {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    background-color: $lightblue;
+    border-radius: 30px;
+    width: 375px;
+    height: 120px;
+    overflow: hidden;
+
+    &--open {
+      display: flex;
+    }
+
+    .dialogue-cardname {
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+
+
+    .buttons-container {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+
+      .option-button {
+        color: white;
+        font-size: 25px;
+        background-color: transparent;
+        border: none;
+        width: 100%;
+        cursor: pointer;
+      }
+    }
+
   }
 
 }

@@ -11,8 +11,9 @@ const dialogueEl = document.querySelector('.car-remove-dialogue');
 const dialCarNameEl = document.querySelector('.js-dialogue-carname');
 const dialYesBtn = document.querySelector('.js-yes-btn');
 const dialNoBtn = document.querySelector('.js-no-btn');
-//FOR SERVICE ONLY
-const clearLogBtn = document.querySelector('.js-clear-log');
+const dialogueCardEl = document.querySelector('.card-remove-dialogue');
+const dialCardYesBtn = document.querySelector('.js-yes-btn--card');
+const dialCardNoBtn = document.querySelector('.js-no-btn--card');
 
 
 const clickedCarId = getFromStorage('clickedCarId');
@@ -125,36 +126,31 @@ function renderLogsList() {
 let carMaintArr = currentCar.carMaintData;
 
 function removeCard(buttonIndex) {
-  carMaintArr.forEach((card, cardIndex) => {
-    if (buttonIndex === cardIndex) {
-      carMaintArr.splice(buttonIndex, 1);
-      saveToStorage('carsData', getCars);
-      console.log('fun2');
-      console.log(buttonIndex);
-      return;
-    }
-    // console.log(cardIndex);
+  dialogueCardEl.classList.add('card-remove-dialogue--open');
 
+
+  dialCardYesBtn.addEventListener('click', () => {
+    carMaintArr.forEach((card, cardIndex) => {
+      if (buttonIndex === cardIndex) {
+        carMaintArr.splice(buttonIndex, 1);
+        saveToStorage('carsData', getCars);
+        console.log('fun2');
+        console.log(buttonIndex);
+
+        dialogueCardEl.classList.remove('card-remove-dialogue--open');
+        return;
+      }
+    })
+    renderLogsList();
   })
 
-  renderLogsList();
+  dialCardNoBtn.addEventListener('click', () => {
+    dialogueCardEl.classList.remove('card-remove-dialogue--open');
+
+    console.log('NO');
+  })
+
 }
-
-
-
-// console.log(carMaintArr);
-
-
-
-// setInterval(() => {
-//   console.log(getCars);
-// }, 26000);
-
-// clearLogBtn.addEventListener('click', () => {
-//   currentCar.carMaintData.splice(0, currentCar.carMaintData.length);
-
-//   saveToStorage('carsData', getCars);
-// })
 
 
 
