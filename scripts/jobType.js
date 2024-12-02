@@ -102,6 +102,8 @@ addBtnEl.addEventListener('click', () => {
     saveToStorage('carsData', getCars);
     jobAddedNotif.classList.add('car-added-notif--open');
 
+    addBtnEl.disabled = true;
+
     setTimeout(() => (
       jobAddedNotif.classList.remove('car-added-notif--open'), window.open('maintLog.html', '_self')
     ), 1200);

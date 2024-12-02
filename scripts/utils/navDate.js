@@ -17,7 +17,6 @@ let updTimeId;
 // const fullDate = `${date}${formattedMonth} ${year}`;
 
 const date1 = dayjs().format('D.MM.YY');
-console.log(date);
 
 export function updateTime() {
   const now = new Date();
@@ -32,6 +31,4 @@ export function updateTime() {
   dateTimeEl.innerHTML = `
   ${date} ${time}
   `;
-
-  console.log('time')
 }

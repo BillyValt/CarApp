@@ -19,9 +19,8 @@
       position: relative;
       background: $itemBackgr;
       border-radius: 30px;
-      padding: 0px 0px 20px 0px;
+      // padding: 0px 0px 20px 0px;
       max-width: 360px;
-      height: 230px;
       overflow: hidden;
       font-weight: 300;
 
@@ -43,31 +42,24 @@
       .job-icon-container--col0 {
         background-color: #4FC3F7;
       }
-
       .job-icon-container--col1 {
         background-color: #A4C639;
       }
-
       .job-icon-container--col2 {
         background-color: #FFEB3B;
       }
-
       .job-icon-container--col3 {
         background-color: #FF7043;
       }
-
       .job-icon-container--col4 {
         background-color: #26C6DA;
       }
-
       .job-icon-container--col5 {
         background-color: #FFA726;
       }
-
       .job-icon-container--col6 {
         background-color: #BA68C8;
       }
-
       .job-icon-container--col7 {
         background-color: #FFAB91;
       }
@@ -88,7 +80,7 @@
         color: rgb(255, 255, 255);
         font-size: 26px;
         text-align: center;
-        margin-top: 14px;
+        margin-top: 15px;
         margin-left: 31px;
         margin-bottom: 14px;
       }
@@ -103,14 +95,22 @@
         color: rgb(0, 0, 0);
         color: #2A2A2A;
         font-size: 23px;
-        padding: 15px 19px 0 19px;
+        padding: 20px 19px 0 19px;
         width: inherit;
         position: relative;
       }
 
       .log-next {
         font-size: 23px;
-        padding-bottom: 60px;
+        padding-bottom: 50px;
+      }
+
+      .trash-img {
+        position: absolute;
+        bottom: 10px;
+        right: 20px;
+        filter: invert(25%) sepia(99%) saturate(4529%) hue-rotate(360deg) brightness(100%) contrast(110%);
+        cursor: pointer;
       }
     }
   }

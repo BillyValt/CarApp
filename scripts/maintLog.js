@@ -4,13 +4,11 @@ import { updateTime } from './utils/navDate.js';
 
 
 const removeBtn = document.querySelector('.remove-btn');
-const dateTimeEl = document.querySelector('.date-time');
 const carNameEl = document.querySelector('.car-info-container');
 const logsContEl = document.querySelector('.logs-container');
 const carRemovedEl = document.querySelector('.car-removed-notif');
 const dialogueEl = document.querySelector('.car-remove-dialogue');
 const dialCarNameEl = document.querySelector('.js-dialogue-carname');
-const iconBackgEl = document.querySelector('.job-icon-container');
 const dialYesBtn = document.querySelector('.js-yes-btn');
 const dialNoBtn = document.querySelector('.js-no-btn');
 //FOR SERVICE ONLY
@@ -18,7 +16,7 @@ const clearLogBtn = document.querySelector('.js-clear-log');
 
 
 const clickedCarId = getFromStorage('clickedCarId');
-const getCars = getFromStorage('carsData');
+let getCars = getFromStorage('carsData');
 const currentCar = getCars[clickedCarId];
 const currentCarName = currentCar.carName;
 const currentCarYear = currentCar.carYear;
@@ -47,9 +45,6 @@ removeBtn.addEventListener('click', () => {
   })
 })
 
-console.log(clickedCarId);
-console.log(currentCar);
-
 carNameEl.innerHTML = `
   <div class="car-icon">
     <img width="106px" height="53px" src="icons/car-icon.svg" alt="car">
@@ -61,6 +56,8 @@ carNameEl.innerHTML = `
 
 renderLogsList();
 function renderLogsList() {
+  logsContEl.innerHTML = '';
+
   if (!currentCar.carMaintData || currentCar.carMaintData.length === 0) {
     logsContEl.innerHTML += `
       <div class="no-cars js-no-cars">Нет записей</div>
@@ -75,25 +72,23 @@ function renderLogsList() {
       let iconBackrColor;
 
       switch (jobId) {
-        case 0: iconName = 'oil'; iconBackrColor = '#4FC3F7';
+        case 0: iconName = 'oil';
           break;
-        case 1: iconName = 'belt'; iconBackrColor = '#A4C639';
+        case 1: iconName = 'belt';
           break;
-        case 2: iconName = 'chain'; iconBackrColor = '#FFEB3B';
+        case 2: iconName = 'chain';
           break;
-        case 3: iconName = 'filter1'; iconBackrColor = '#FF7043';
+        case 3: iconName = 'filter1';
           break;
-        case 4: iconName = 'filter'; iconBackrColor = '#FFA726';
+        case 4: iconName = 'filter';
           break;
-        case 5: iconName = 'sparkplug'; iconBackrColor = '#26C6DA';
+        case 5: iconName = 'sparkplug';
           break;
-        case 6: iconName = 'fuel'; iconBackrColor = '#BA68C8';
+        case 6: iconName = 'fuel';
           break;
-        case 7: iconName = 'belt1'; iconBackrColor = '#FFAB91';
+        case 7: iconName = 'belt1';
           break;
       }
-      console.log(iconName);
-      console.log(iconBackrColor);
 
       if (currentCar.carMaintData.length > 0) {
         logsContEl.innerHTML += `
@@ -108,13 +103,52 @@ function renderLogsList() {
           <div class="log-date"><img src="icons/card-icons/calendar.svg"> ${jobDate}</div>
           <div class="log-mileage"><img src="icons/card-icons/speedometer.svg"> ${jobMileage}км</div>
           <div class="log-next"><img src="icons/card-icons/repeat.svg">14нояб 2025| 277463км</div>
+          <img class="trash-img" src="icons/card-icons/trash.svg" alt="trash">
         </div>
       `;
       }
     })
-
   }
+
+  const removeLogBt = document.querySelectorAll('.trash-img');
+
+
+  removeLogBt.forEach((trashIcn, btnIndex) => {
+    trashIcn.addEventListener('click', () => {
+      console.log('clicked', btnIndex)
+      removeCard(btnIndex);
+    })
+  })
+
 }
+
+let carMaintArr = currentCar.carMaintData;
+
+function removeCard(buttonIndex) {
+  carMaintArr.forEach((card, cardIndex) => {
+    if (buttonIndex === cardIndex) {
+      carMaintArr.splice(buttonIndex, 1);
+      saveToStorage('carsData', getCars);
+      console.log('fun2');
+      console.log(buttonIndex);
+      return;
+    }
+    // console.log(cardIndex);
+
+  })
+
+  renderLogsList();
+}
+
+
+
+// console.log(carMaintArr);
+
+
+
+// setInterval(() => {
+//   console.log(getCars);
+// }, 26000);
 
 clearLogBtn.addEventListener('click', () => {
   currentCar.carMaintData.splice(0, currentCar.carMaintData.length);

@@ -4,6 +4,7 @@
 @import 'jobType';
 @import 'maintLog';
 @import 'titles';
+@import 'footer';
 html {
   background-color: rgb(10, 3, 24);
 }
@@ -18,17 +19,18 @@ body {
   background-attachment: fixed;
   font-family: $robotoCon;
   color: white;
-  min-height: 110vh;
-  padding-bottom: 100px;
+  min-height: 100vh;
+  // padding-bottom: 100px;
 }
 
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   max-width: 440px;
   min-width: 300px;
   font-weight: 300;
   margin: 0 auto;
+  min-height: 100vh;
 }

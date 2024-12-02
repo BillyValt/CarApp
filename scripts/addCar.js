@@ -9,11 +9,12 @@ const addCarBtEl = document.querySelector('.js-add-car-bt');
 const errorMesEl = document.querySelector('.error-message-car');
 const carAddedEl = document.querySelector('.car-added-notif');
 
-
 const getCars = getFromStorage('carsData');
-let addedCarId = getCars.length;
 
-let carsData = getFromStorage('carsData') || [];
+let carsData = getFromStorage('carsData') || saveToStorage('carsData', []);
+let addedCarId = getCars.length || 0;
+
+console.log(carsData);
 
 updateTime();
 addCarBtEl.addEventListener('click', () => {

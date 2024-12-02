@@ -52,9 +52,6 @@ li {
   padding-right: 0px;
   border-radius: 30px;
   background-color: white;
-  overflow: hidden;
-  box-shadow: 0px 0px 5px 17px rgba(0, 0, 0, 0.14);
-  box-shadow: 0px 0px 10px 17px rgba(0, 94, 172, 0.1);
 }
 .main .car-list .car-log .number {
   display: flex;
@@ -63,6 +60,8 @@ li {
   font-size: 28px;
   background-color: #7373C9;
   width: 47px;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
 }
 .main .car-list .car-log .car-info {
   display: flex;
@@ -334,9 +333,7 @@ li {
   position: relative;
   background: #0c3c66;
   border-radius: 30px;
-  padding: 0px 0px 20px 0px;
   max-width: 360px;
-  height: 230px;
   overflow: hidden;
   font-weight: 300;
 }
@@ -388,7 +385,7 @@ li {
   color: rgb(255, 255, 255);
   font-size: 26px;
   text-align: center;
-  margin-top: 14px;
+  margin-top: 15px;
   margin-left: 31px;
   margin-bottom: 14px;
 }
@@ -402,13 +399,20 @@ li {
   color: rgb(0, 0, 0);
   color: #2A2A2A;
   font-size: 23px;
-  padding: 15px 19px 0 19px;
+  padding: 20px 19px 0 19px;
   width: inherit;
   position: relative;
 }
 .main .logs-container .log .log-next {
   font-size: 23px;
-  padding-bottom: 60px;
+  padding-bottom: 50px;
+}
+.main .logs-container .log .trash-img {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  filter: invert(25%) sepia(99%) saturate(4529%) hue-rotate(360deg) brightness(100%) contrast(110%);
+  cursor: pointer;
 }
 .main .remove-btn {
   margin-top: 60px;
@@ -488,7 +492,11 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 35px;
+  margin-top: 25px;
+  background-color: rgb(40, 40, 100);
+  border-radius: 20px;
+  height: 100px;
+  width: 100%;
 }
 .main .title .oiler-icon {
   width: 74px;
@@ -517,8 +525,12 @@ li {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin-top: 35px;
+  margin-top: 25px;
   padding: 0 30px;
+  background-color: rgb(40, 40, 100);
+  box-shadow: 2px 2px rgb(40, 40, 100);
+  border-radius: 20px;
+  height: 70px;
 }
 .main .nav-bar .back-btn {
   display: flex;
@@ -566,6 +578,15 @@ li {
   font-size: 22px;
 }
 
+footer .author-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  max-width: 440px;
+  min-width: 300px;
+  padding-bottom: 20px;
+}
+
 html {
   background-color: rgb(10, 3, 24);
 }
@@ -575,17 +596,17 @@ body {
   background-attachment: fixed;
   font-family: "Roboto Condensed";
   color: white;
-  min-height: 110vh;
-  padding-bottom: 100px;
+  min-height: 100vh;
 }
 
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   max-width: 440px;
   min-width: 300px;
   font-weight: 300;
   margin: 0 auto;
+  min-height: 100vh;
 }/*# sourceMappingURL=main.css.map */

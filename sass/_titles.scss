@@ -3,7 +3,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 35px;
+    margin-top: 25px;
+
+    background-color: $titlesBackgr;
+    border-radius: 20px;
+    height: 100px;
+    width: 100%;
 
 
     .oiler-icon {
@@ -38,9 +43,12 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin-top: 35px;
+    margin-top: 25px;
     padding: 0 30px;
-    // margin-bottom: 20px;
+    background-color: $titlesBackgr;
+    box-shadow: 2px 2px rgb(40, 40, 100);
+    border-radius: 20px;
+    height: 70px;
 
     .back-btn {
       display: flex;
