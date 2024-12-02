@@ -585,8 +585,14 @@ footer .author-container {
   margin: 0 auto;
   max-width: 440px;
   min-width: 300px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 40px 0;
+}
+@media (max-width: 430px) {
+  footer .author-container {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+  }
 }
 
 html {

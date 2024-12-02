@@ -150,11 +150,11 @@ function removeCard(buttonIndex) {
 //   console.log(getCars);
 // }, 26000);
 
-clearLogBtn.addEventListener('click', () => {
-  currentCar.carMaintData.splice(0, currentCar.carMaintData.length);
+// clearLogBtn.addEventListener('click', () => {
+//   currentCar.carMaintData.splice(0, currentCar.carMaintData.length);
 
-  saveToStorage('carsData', getCars);
-})
+//   saveToStorage('carsData', getCars);
+// })
 
 
 
