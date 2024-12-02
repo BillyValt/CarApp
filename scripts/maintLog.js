@@ -14,6 +14,7 @@ const dialNoBtn = document.querySelector('.js-no-btn');
 const dialogueCardEl = document.querySelector('.card-remove-dialogue');
 const dialCardYesBtn = document.querySelector('.js-yes-btn--card');
 const dialCardNoBtn = document.querySelector('.js-no-btn--card');
+const dialogueCardNameEl = document.querySelector('.js-dialogue-cardname');
 
 
 const clickedCarId = getFromStorage('clickedCarId');
@@ -55,6 +56,8 @@ carNameEl.innerHTML = `
   <div class="car-vin"><span class="car-vin--title">VIN: </span>${currentCar.carVin}</div>
 `;
 
+let carMaintArr = currentCar.carMaintData;
+let removeJobName;
 renderLogsList();
 function renderLogsList() {
   logsContEl.innerHTML = '';
@@ -70,7 +73,6 @@ function renderLogsList() {
       const jobMileage = log.jobMileage;
       const jobId = log.jobId;
       let iconName;
-      let iconBackrColor;
 
       switch (jobId) {
         case 0: iconName = 'oil';
@@ -116,40 +118,43 @@ function renderLogsList() {
 
   removeLogBt.forEach((trashIcn, btnIndex) => {
     trashIcn.addEventListener('click', () => {
-      console.log('clicked', btnIndex)
+      console.log('clicked', btnIndex);
+      removeJobName = carMaintArr[btnIndex].chosenJob;
       removeCard(btnIndex);
     })
   })
 
 }
 
-let carMaintArr = currentCar.carMaintData;
 
 function removeCard(buttonIndex) {
   dialogueCardEl.classList.add('card-remove-dialogue--open');
 
+  dialogueCardNameEl.innerText = `${removeJobName}`;
+
+  // carMaintArr.forEach((card, cardIndex) => {}
 
   dialCardYesBtn.addEventListener('click', () => {
     carMaintArr.forEach((card, cardIndex) => {
       if (buttonIndex === cardIndex) {
         carMaintArr.splice(buttonIndex, 1);
         saveToStorage('carsData', getCars);
-        console.log('fun2');
-        console.log(buttonIndex);
 
         dialogueCardEl.classList.remove('card-remove-dialogue--open');
+
+
+        console.log(carMaintArr[cardIndex].chosenJob);
+        console.log(cardIndex);
+
+        renderLogsList();
         return;
       }
     })
-    renderLogsList();
   })
 
   dialCardNoBtn.addEventListener('click', () => {
     dialogueCardEl.classList.remove('card-remove-dialogue--open');
-
-    console.log('NO');
   })
-
 }
 
 
