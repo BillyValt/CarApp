@@ -327,6 +327,7 @@ li {
   display: flex;
   flex-direction: column-reverse;
   margin-top: 20px;
+  margin-bottom: 10vh;
 }
 .main .logs-container .log {
   margin-bottom: 20px;
@@ -584,6 +585,7 @@ footer .author-container {
   margin: 0 auto;
   max-width: 440px;
   min-width: 300px;
+  padding-top: 20px;
   padding-bottom: 20px;
 }
 
