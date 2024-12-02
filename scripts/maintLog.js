@@ -141,10 +141,8 @@ function removeCard(buttonIndex) {
         saveToStorage('carsData', getCars);
 
         dialogueCardEl.classList.remove('card-remove-dialogue--open');
-
-
-        console.log(carMaintArr[cardIndex].chosenJob);
-        console.log(cardIndex);
+        // console.log(carMaintArr[cardIndex].chosenJob);
+        // console.log(cardIndex);
 
         renderLogsList();
         return;
