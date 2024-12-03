@@ -512,6 +512,11 @@ li {
   align-items: center;
   height: 100%;
 }
+.main .card-remove-dialogue .js-dialogue-cardname {
+  display: flex;
+  align-items: center;
+  line-height: 0px;
+}
 .main .card-remove-dialogue .buttons-container {
   display: flex;
   justify-content: space-between;
