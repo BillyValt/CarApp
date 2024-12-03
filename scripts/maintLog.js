@@ -113,47 +113,38 @@ function renderLogsList() {
     })
   }
 
-  const removeLogBt = document.querySelectorAll('.trash-img');
+  const trashIcn = document.querySelectorAll('.trash-img');
+  trashIcn.forEach((button, btnIndex) => {
+    button.addEventListener('click', () => {
+      dialogueCardEl.classList.add('card-remove-dialogue--open');
 
-
-  removeLogBt.forEach((trashIcn, btnIndex) => {
-    trashIcn.addEventListener('click', () => {
-      console.log('clicked', btnIndex);
+      clickedRemBtnIndex = btnIndex;
       removeJobName = carMaintArr[btnIndex].chosenJob;
-      removeCard(btnIndex);
+      dialogueCardNameEl.innerText = `${removeJobName}`;
     })
   })
-
 }
 
+let clickedRemBtnIndex;
 
 function removeCard(buttonIndex) {
-  dialogueCardEl.classList.add('card-remove-dialogue--open');
-
-  dialogueCardNameEl.innerText = `${removeJobName}`;
-
-  // carMaintArr.forEach((card, cardIndex) => {}
-
-  dialCardYesBtn.addEventListener('click', () => {
-    carMaintArr.forEach((card, cardIndex) => {
-      if (buttonIndex === cardIndex) {
-        carMaintArr.splice(buttonIndex, 1);
-        saveToStorage('carsData', getCars);
-
-        dialogueCardEl.classList.remove('card-remove-dialogue--open');
-        // console.log(carMaintArr[cardIndex].chosenJob);
-        // console.log(cardIndex);
-
-        renderLogsList();
-        return;
-      }
-    })
-  })
-
-  dialCardNoBtn.addEventListener('click', () => {
-    dialogueCardEl.classList.remove('card-remove-dialogue--open');
-  })
+  carMaintArr.splice(buttonIndex, 1);
+  saveToStorage('carsData', getCars);
 }
 
+dialCardYesBtn.addEventListener('click', () => {
+  dialogueCardEl.classList.remove('card-remove-dialogue--open');
+  console.log('called');
 
+  carMaintArr.forEach((card, cardIndex) => {
+    if (clickedRemBtnIndex === cardIndex) {
+      removeCard(clickedRemBtnIndex);
+      console.log('click', cardIndex);
+      renderLogsList();
+    }
+  });
+})
 
+dialCardNoBtn.addEventListener('click', () => {
+  dialogueCardEl.classList.remove('card-remove-dialogue--open');
+})
