@@ -243,23 +243,27 @@ li {
 .main .inputs-mileage .dropdown-list--close {
   display: none;
 }
+.main .inputs-mileage .dropdown-list-container {
+  position: absolute;
+  bottom: -5px;
+  width: 100%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  overflow: hidden;
+  transform: translateY(100%);
+  z-index: 2;
+}
 .main .inputs-mileage .dropdown-list--open {
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: start;
-  position: absolute;
-  bottom: -5px;
   background-color: white;
-  width: 100%;
   padding-left: 17px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  transform: translateY(100%);
   font-size: 20px;
-  z-index: 2;
-  height: 300px;
   overflow: scroll;
+  animation: rollMenu 0.3s;
+  height: 300px;
 }
 .main .inputs-mileage .job-type {
   display: flex;
@@ -337,6 +341,7 @@ li {
   max-width: 360px;
   overflow: hidden;
   font-weight: 300;
+  box-shadow: 0px 0px 10px 20px rgba(4, 24, 56, 0.842);
 }
 .main .logs-container .log img {
   width: 28px;
@@ -573,7 +578,7 @@ li {
   margin-top: 25px;
   padding: 0 30px;
   background-color: rgb(40, 40, 100);
-  box-shadow: 2px 2px rgb(40, 40, 100);
+  background-color: rgb(3, 27, 66);
   border-radius: 20px;
   height: 70px;
 }
@@ -641,7 +646,7 @@ html {
 }
 
 body {
-  background: #031b42 no-repeat center;
+  background: rgb(3, 27, 66) no-repeat center;
   background-attachment: fixed;
   font-family: "Roboto Condensed";
   color: white;

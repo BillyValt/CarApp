@@ -46,7 +46,9 @@
     margin-top: 25px;
     padding: 0 30px;
     background-color: $titlesBackgr;
-    box-shadow: 2px 2px rgb(40, 40, 100);
+    background-color: $backgrGrad;
+    // box-shadow: 0px 0px 10px 20px rgba(4, 24, 56, 0.842);
+    // box-shadow: 0px 0px 20px 17px rgba(4, 24, 56, 0.96);
     border-radius: 20px;
     height: 70px;
 
