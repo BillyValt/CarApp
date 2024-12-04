@@ -112,6 +112,9 @@ addBtnEl.addEventListener('click', () => {
 
 const monthsShort = ['янв', 'фев', 'мар', 'апр', 'май', 'июн', 'июл', 'авг', 'сен', 'окт', 'нояб', 'дек'];
 
+const inputDate = inputDateEl.value;
+const dateObj = Date(inputDate);
+
 inputDateEl.addEventListener('change', event => {
   const date = new Date(event.target.value);
   if (!isNaN(date)) {
@@ -120,6 +123,8 @@ inputDateEl.addEventListener('change', event => {
     const year = date.getFullYear();
 
     jobDate = `${day}${month} ${year}`;
+    console.log(dateObj);
+    console.log(dateObj.getTime());
   }
 })
 
