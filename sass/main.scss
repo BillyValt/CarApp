@@ -5,9 +5,11 @@
 @import 'maintLog';
 @import 'titles';
 @import 'footer';
+
 html {
   background-color: rgb(10, 3, 24);
 }
+
 body {
   // display: flex;
   // flex-direction: column;
@@ -15,7 +17,8 @@ body {
   // align-items: center;
   // background-color: #46344E;
   // background-color: #4C3158;
-  background: $backgrGrad no-repeat center;
+  overflow-x: hidden;
+  background-color: $backgrGrad;
   background-attachment: fixed;
   font-family: $robotoCon;
   color: white;

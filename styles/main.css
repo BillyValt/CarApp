@@ -90,19 +90,22 @@ li {
   text-transform: uppercase;
   color: #5D5D5D;
 }
-.main .background-image img {
-  width: auto;
-  height: 100vh;
+.main .background-image {
   position: absolute;
   top: 0;
-  transform: translatex(-50%);
-  opacity: 0.035;
-  z-index: 0;
+  left: 0;
+}
+.main .background-image img {
+  opacity: 0.078;
+  z-index: 1;
+  transform: scale(1.6) translateY(20%);
+  width: 100%;
 }
 @media (min-width: 740px) {
   .main .background-image img {
     width: 100vw;
     height: auto;
+    transform: scale(1) translateY(0%);
   }
 }
 .main .no-cars {
@@ -565,7 +568,6 @@ li {
   justify-content: center;
   align-items: center;
   margin-top: 25px;
-  background-color: rgb(40, 40, 100);
   border-radius: 20px;
   height: 100px;
   width: 100%;
@@ -669,7 +671,8 @@ html {
 }
 
 body {
-  background: rgb(3, 27, 66) no-repeat center;
+  overflow-x: hidden;
+  background-color: rgb(3, 27, 66);
   background-attachment: fixed;
   font-family: "Roboto Condensed";
   color: white;
