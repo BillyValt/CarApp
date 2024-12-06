@@ -4,11 +4,11 @@
     justify-content: center;
     align-items: center;
     margin-top: 25px;
-
     background-color: $titlesBackgr;
     border-radius: 20px;
     height: 100px;
     width: 100%;
+    z-index: 2;
 
 
     .oiler-icon {
@@ -82,6 +82,7 @@
     color: white;
     font-size: 30px;
     margin-top: 25px;
+    z-index: 2;
   }
 
   .car-info-container {

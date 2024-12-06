@@ -123,10 +123,10 @@ inputDateEl.addEventListener('change', event => {
     const year = date.getFullYear();
 
     jobDate = `${day}${month} ${year}`;
-    console.log(dateObj);
-    console.log(dateObj.getTime());
+
+    console.log(jobDate);
   }
+
+
 })
-
-
 
