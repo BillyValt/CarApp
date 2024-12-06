@@ -57,8 +57,9 @@ li {
   cursor: pointer;
   padding-right: 0px;
   border-radius: 30px;
-  background-color: white;
+  background-color: rgb(243, 243, 243);
   z-index: 2;
+  box-shadow: inset 0px 0px 10px 9px rgba(0, 0, 0, 0.3);
 }
 .main .car-list .car-log .number {
   display: flex;
@@ -94,6 +95,7 @@ li {
   position: absolute;
   top: 0;
   left: 0;
+  background: linear-gradient(180deg, rgba(73, 99, 127, 0) 0%, rgb(3, 27, 66) 100%);
 }
 .main .background-image img {
   opacity: 0.078;
