@@ -13,6 +13,9 @@ li {
   list-style: none;
 }
 
+.main a {
+  z-index: 2;
+}
 .main .add-button {
   display: flex;
   justify-content: center;
@@ -88,12 +91,19 @@ li {
   color: #5D5D5D;
 }
 .main .background-image img {
-  height: 70vh;
+  width: auto;
+  height: 100vh;
   position: absolute;
   top: 0;
   transform: translatex(-50%);
-  opacity: 0.075;
+  opacity: 0.035;
   z-index: 0;
+}
+@media (min-width: 740px) {
+  .main .background-image img {
+    width: 100vw;
+    height: auto;
+  }
 }
 .main .no-cars {
   margin-top: 60px;
