@@ -95,7 +95,6 @@ li {
   position: absolute;
   top: 0;
   left: 0;
-  background: linear-gradient(180deg, rgba(73, 99, 127, 0) 0%, rgb(3, 27, 66) 100%);
 }
 .main .background-image img {
   opacity: 0.078;
