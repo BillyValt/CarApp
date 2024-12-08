@@ -1,4 +1,5 @@
 footer {
+  z-index: 3;
   .author-container {
     display: flex;
     flex-direction: column;
@@ -10,15 +11,10 @@ footer {
     color: $pink;
     padding: 40px 0;
     white-space: nowrap;
-
-    // @media (max-width: 430px) {
-    //   & {
-      
-    //   }
-
-    // }
+    z-index: 3;
   }
 
 
-
+  
 }
+
