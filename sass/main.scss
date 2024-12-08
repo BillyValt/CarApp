@@ -11,13 +11,7 @@ html {
 }
 
 body {
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
-  // align-items: center;
-  // background-color: #46344E;
-  // background-color: #4C3158;
-  overflow-x: hidden;
+position: relative;
   background-color: $backgrGrad;
   background-attachment: fixed;
   font-family: $robotoCon;

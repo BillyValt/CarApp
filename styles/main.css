@@ -13,6 +13,9 @@ li {
   list-style: none;
 }
 
+.main {
+  position: relative;
+}
 .main a {
   z-index: 2;
 }
@@ -59,7 +62,6 @@ li {
   border-radius: 30px;
   background-color: rgb(243, 243, 243);
   z-index: 2;
-  box-shadow: inset 0px 0px 10px 9px rgba(0, 0, 0, 0.3);
 }
 .main .car-list .car-log .number {
   display: flex;
@@ -91,28 +93,34 @@ li {
   text-transform: uppercase;
   color: #5D5D5D;
 }
-.main .background-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.main .background-image img {
-  opacity: 0.078;
-  z-index: 1;
-  transform: scale(1.6) translateY(20%);
-  width: 100%;
-}
-@media (min-width: 740px) {
-  .main .background-image img {
-    width: 100vw;
-    height: auto;
-    transform: scale(1) translateY(0%);
-  }
-}
 .main .no-cars {
   margin-top: 60px;
   margin-bottom: 60px;
   font-size: 20px;
+}
+
+.background-image {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(3, 27, 66) 39%);
+}
+.background-image img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.078;
+  z-index: 1;
+  object-fit: cover;
+}
+@media (min-width: 740px) {
+  .background-image img {
+    width: 100vw;
+    height: auto;
+    transform: scale(1) translateY(0%);
+  }
 }
 
 * {
@@ -672,7 +680,7 @@ html {
 }
 
 body {
-  overflow-x: hidden;
+  position: relative;
   background-color: rgb(3, 27, 66);
   background-attachment: fixed;
   font-family: "Roboto Condensed";
