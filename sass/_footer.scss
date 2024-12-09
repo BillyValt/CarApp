@@ -1,4 +1,7 @@
 footer {
+  p {
+    z-index: 3;
+  }
   z-index: 3;
   .author-container {
     display: flex;
@@ -11,7 +14,6 @@ footer {
     color: $pink;
     padding: 40px 0;
     white-space: nowrap;
-    z-index: 3;
   }
 
 
