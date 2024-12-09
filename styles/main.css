@@ -338,6 +338,7 @@ li {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   cursor: pointer;
+  z-index: 4;
 }
 .main .inputs-mileage .choose-job {
   display: flex;
@@ -370,7 +371,6 @@ li {
   border-bottom-right-radius: 20px;
   overflow: hidden;
   transform: translateY(100%);
-  z-index: 2;
 }
 .main .inputs-mileage .dropdown-list--open {
   display: flex;
@@ -383,13 +383,14 @@ li {
   overflow: scroll;
   animation: rollMenu 0.3s;
   height: 300px;
+  z-index: 4;
 }
 .main .inputs-mileage .job-type {
   display: flex;
   justify-content: start;
   align-items: center;
   padding: 21px 0px;
-  width: inherit;
+  width: 100%;
 }
 .main .inputs-mileage .job-name {
   padding-left: 10px;

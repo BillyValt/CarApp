@@ -42,6 +42,7 @@
       // border-bottom-left-radius: 0px;
       // border-bottom-right-radius: 0px;
       cursor: pointer;
+      z-index: 4;
     }
 
     .choose-job {
@@ -81,7 +82,6 @@
       border-bottom-right-radius: 20px;
       overflow: hidden;
       transform: translateY(100%);
-      z-index: 2;
     }
 
     .dropdown-list--open {
@@ -95,6 +95,7 @@
       overflow: scroll;
       animation: rollMenu 0.3s;
       height: 300px;
+      z-index: 4;
     }
 
     // @keyframes rollMenu {
@@ -113,7 +114,7 @@
       justify-content: start;
       align-items: center;
       padding: 21px 0px;
-      width: inherit;
+      width: 100%;
 
     }
 
