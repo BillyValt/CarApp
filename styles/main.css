@@ -52,7 +52,7 @@ li {
   margin-top: 25px;
   padding: 0 30px;
   background-color: rgba(40, 40, 100, 0.5);
-  background-color: rgba(115, 115, 201, 0.2);
+  background-color: rgba(115, 115, 201, 0.15);
   border-radius: 20px;
   height: 70px;
 }
@@ -460,7 +460,6 @@ li {
   max-width: 360px;
   overflow: hidden;
   font-weight: 300;
-  box-shadow: 0px 0px 10px 20px rgba(4, 24, 56, 0.842);
 }
 .main .logs-container .log img {
   width: 28px;

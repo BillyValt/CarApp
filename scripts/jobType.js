@@ -126,7 +126,5 @@ inputDateEl.addEventListener('change', event => {
 
     console.log(jobDate);
   }
-
-
 })
 
