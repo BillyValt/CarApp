@@ -21,7 +21,6 @@ li {
   border-radius: 20px;
   height: 100px;
   width: 100%;
-  z-index: 2;
 }
 .main .title .oiler-icon {
   width: 74px;
@@ -52,7 +51,6 @@ li {
   width: 100%;
   margin-top: 25px;
   padding: 0 30px;
-  background-color: rgb(40, 40, 100);
   border-radius: 20px;
   height: 70px;
 }
@@ -82,7 +80,6 @@ li {
   color: white;
   font-size: 30px;
   margin-top: 25px;
-  z-index: 2;
 }
 .main .car-info-container {
   display: flex;
@@ -103,9 +100,6 @@ li {
   font-size: 22px;
 }
 
-.main {
-  z-index: 2;
-}
 .main a {
   z-index: 2;
 }
@@ -197,7 +191,6 @@ li {
   left: 0;
   overflow: hidden;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(3, 27, 66) 39%);
-  z-index: 0;
 }
 .background-image img {
   width: 100%;
@@ -662,10 +655,7 @@ li {
   cursor: pointer;
 }
 
-footer {
-  z-index: 3;
-}
-footer p {
+footer * {
   z-index: 3;
 }
 footer .author-container {
@@ -704,4 +694,7 @@ body {
   font-weight: 300;
   margin: 0 auto;
   min-height: 100vh;
+}
+.main * {
+  z-index: 3;
 }/*# sourceMappingURL=main.css.map */

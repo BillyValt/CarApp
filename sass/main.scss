@@ -21,6 +21,10 @@ position: relative;
 }
 
 .main {
+  * {
+    z-index: 3;
+  }
+  
   display: flex;
   flex-direction: column;
   justify-content: start;
