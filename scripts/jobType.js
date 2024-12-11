@@ -142,13 +142,8 @@ addBtnEl.addEventListener('click', () => {
 
     addBtnEl.disabled = true;
 
-    // setTimeout(() => (
-    //   jobAddedNotif.classList.remove('car-added-notif--open'), window.open('maintLog.html', '_self')
-    // ), 1200);
-
-
     setTimeout(() => (
-      jobAddedNotif.classList.remove('car-added-notif--open')
+      jobAddedNotif.classList.remove('car-added-notif--open'), window.open('maintLog.html', '_self')
     ), 1200);
   }
 })
