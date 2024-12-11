@@ -1,10 +1,5 @@
 @import 'config';
 @import 'titles';
-@import 'index';
-@import 'addCar';
-@import 'jobType';
-@import 'maintLog';
-@import 'footer';
 
 html {
   background-color: rgb(10, 3, 24);
@@ -35,3 +30,9 @@ position: relative;
   margin: 0 auto;
   min-height: 100vh;
 }
+
+@import 'index';
+@import 'addCar';
+@import 'jobType';
+@import 'maintLog';
+@import 'footer';

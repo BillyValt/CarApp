@@ -23,6 +23,8 @@ let jobId;
 let chosenJob;
 let jobDate;
 let jobMileage;
+let nextMaintDate;
+let nextMaintMileage;
 
 let iconName;
 let carMaintData = {};
@@ -79,20 +81,56 @@ jobTypeEl.forEach((jobType, index) => {
 addBtnEl.addEventListener('click', () => {
   // jobDate = inputDateEl.value;
   jobMileage = inputMileageEl.value;
+  nextMaintDate = addDaysToDate(365);
+  console.log('NextMaintDate', nextMaintDate);
+  console.log('NextMaintMileage', typeof jobMileage);
+
+  switch (jobId) {
+    case 0: nextMaintDate = addDaysToDate(365);
+      nextMaintMileage = Number(jobMileage) + 10000;
+      break;
+    case 1: nextMaintDate = '';
+      nextMaintMileage = Number(jobMileage) + 50000;
+      break;
+    case 2: nextMaintDate = '';
+      nextMaintMileage = `Проверьте на ${Number(jobMileage) + 100000}`;
+      break;
+    case 3: nextMaintDate = addDaysToDate(365);
+      nextMaintMileage = Number(jobMileage) + 15000;
+      break;
+    case 4: nextMaintDate = '';
+      nextMaintMileage = Number(jobMileage) + 30000;;
+      break;
+    case 5: nextMaintDate = '';
+      nextMaintMileage = Number(jobMileage) + 30000;;
+      break;
+    case 6: nextMaintDate = '';
+      nextMaintMileage = Number(jobMileage) + 40000;;
+      break;
+    case 7: nextMaintDate = '';
+      nextMaintMileage = `Проверьте на ${Number(jobMileage) + 20000}`
+      break;
+  }
 
   carMaintData = {
     jobId,
     chosenJob,
     jobDate,
     jobMileage,
-    nextMaintDate: '14.10.24',
-    nextMaintMileage: '277463'
+    nextMaintDate,
+    nextMaintMileage
   }
+  console.log(jobId)
 
-  console.log(carMaintData.jobId);
-  console.log(carMaintData.jobDate);
-  console.log(carMaintData.chosenJob);
-  console.log(carMaintData.jobMileage);
+
+
+  // console.log(carMaintData.jobId);
+  // console.log(carMaintData.jobDate);
+  // console.log(carMaintData.chosenJob);
+  // console.log(carMaintData.nextMaintDate);
+  // console.log(carMaintData.jobMileage);
+
+
 
   if (!chosenJob || !jobDate || !jobMileage) {
     errorMesnEl.style.display = 'flex';
@@ -104,8 +142,13 @@ addBtnEl.addEventListener('click', () => {
 
     addBtnEl.disabled = true;
 
+    // setTimeout(() => (
+    //   jobAddedNotif.classList.remove('car-added-notif--open'), window.open('maintLog.html', '_self')
+    // ), 1200);
+
+
     setTimeout(() => (
-      jobAddedNotif.classList.remove('car-added-notif--open'), window.open('maintLog.html', '_self')
+      jobAddedNotif.classList.remove('car-added-notif--open')
     ), 1200);
   }
 })
@@ -123,8 +166,38 @@ inputDateEl.addEventListener('change', event => {
     const year = date.getFullYear();
 
     jobDate = `${day}${month} ${year}`;
-
-    console.log(jobDate);
   }
 })
+
+function addDaysToDate(daysToAdd) {
+  const input = document.querySelector('.js-input-job-date');
+
+  const inputValue = input.value;
+
+  if (!inputValue) {
+    console.log('Errrrrror1');
+    return;
+  }
+
+  const currentDate = new Date(inputValue);
+
+  if (isNaN(currentDate.getTime())) {
+    console.log('Errrrrror2');
+    return;
+  }
+
+  currentDate.setDate(currentDate.getDate() + daysToAdd);
+
+  const formattedDate = currentDate.toISOString().split("T")[0];
+
+  const month = formattedDate.split('-')[1];
+  const year = formattedDate.split('-')[0];
+  const day = formattedDate.split('-')[2];
+
+  const monthIndex = parseInt(month, 10) - 1;
+  const formattedMonth = monthsShort[monthIndex];
+
+
+  return `${day}${formattedMonth} ${year}`;
+}
 

@@ -68,10 +68,12 @@ function renderLogsList() {
       `;
   } else if (getCars.length > 0) {
     currentCar.carMaintData.forEach((log, index) => {
+      const jobId = log.jobId;
       const chosenJob = log.chosenJob;
       const jobDate = log.jobDate;
       const jobMileage = log.jobMileage;
-      const jobId = log.jobId;
+      const nextMaintDate = log.nextMaintDate;
+      const nextMaintMileage = log.nextMaintMileage;
       let iconName;
 
       switch (jobId) {
@@ -105,7 +107,7 @@ function renderLogsList() {
           </div>
           <div class="log-date"><img src="icons/card-icons/calendar.svg"> ${jobDate}</div>
           <div class="log-mileage"><img src="icons/card-icons/speedometer.svg"> ${jobMileage}км</div>
-          <div class="log-next"><img src="icons/card-icons/repeat.svg">14нояб 2025| 277463км</div>
+          <div class="log-next"><img src="icons/card-icons/repeat.svg">${nextMaintDate ? nextMaintDate : ''} ${!nextMaintDate || !nextMaintMileage ? '' : '|'} ${nextMaintMileage ? nextMaintMileage + 'км' : ''}</div>
           <img class="trash-img" src="icons/card-icons/trash.svg" alt="trash">
         </div>
       `;
