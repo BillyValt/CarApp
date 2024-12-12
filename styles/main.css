@@ -235,6 +235,13 @@ body {
     transform: scale(1) translateY(-7%);
   }
 }
+@media (min-width: 1100px) {
+  .background-image img {
+    width: auto;
+    height: 100vw;
+    transform: scale(1) translateY(-12%);
+  }
+}
 
 * {
   margin: 0;
