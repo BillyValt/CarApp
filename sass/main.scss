@@ -1,6 +1,20 @@
 @import 'config';
 @import 'titles';
 
+::-webkit-scrollbar {
+  width: clamp(7px, 1vw, 10px);
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $backgrGrad;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
 html {
   background-color: rgb(10, 3, 24);
 }

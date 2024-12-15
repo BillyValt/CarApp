@@ -102,6 +102,20 @@ li {
   font-size: 22px;
 }
 
+::-webkit-scrollbar {
+  width: clamp(7px, 1vw, 10px);
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(3, 27, 66);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
 html {
   background-color: rgb(10, 3, 24);
 }
@@ -512,10 +526,10 @@ li {
   margin-right: 10px;
 }
 .main .logs-container .log .job-icon-container--col0 {
-  background-color: #4FC3F7;
+  background-color: #A4C639;
 }
 .main .logs-container .log .job-icon-container--col1 {
-  background-color: #A4C639;
+  background-color: #4FC3F7;
 }
 .main .logs-container .log .job-icon-container--col2 {
   background-color: #FFEB3B;
@@ -549,6 +563,7 @@ li {
   margin-top: 15px;
   margin-left: 31px;
   margin-bottom: 14px;
+  font-weight: 400;
 }
 .main .logs-container .log .log-date,
 .main .logs-container .log .log-next,
@@ -560,6 +575,7 @@ li {
   color: rgb(0, 0, 0);
   color: #2A2A2A;
   font-size: 23px;
+  font-weight: 400;
   padding: 20px 19px 0 19px;
   width: inherit;
   position: relative;
@@ -662,10 +678,11 @@ li {
   border-radius: 30px;
   width: 375px;
   height: 120px;
-  overflow: hidden;
+  z-index: 5;
 }
 .main .card-remove-dialogue--open {
   display: flex;
+  z-index: 3;
 }
 .main .card-remove-dialogue .dialogue-cardname {
   display: flex;

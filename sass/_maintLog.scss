@@ -43,11 +43,11 @@
       }
 
       .job-icon-container--col0 {
-        background-color: #4FC3F7;
+        background-color: #A4C639;
       }
 
       .job-icon-container--col1 {
-        background-color: #A4C639;
+        background-color:  #4FC3F7;
       }
 
       .job-icon-container--col2 {
@@ -93,6 +93,7 @@
         margin-top: 15px;
         margin-left: 31px;
         margin-bottom: 14px;
+        font-weight: 400;
       }
 
       .log-date,
@@ -105,6 +106,7 @@
         color: rgb(0, 0, 0);
         color: #2A2A2A;
         font-size: 23px;
+        font-weight: 400;
         padding: 20px 19px 0 19px;
         width: inherit;
         position: relative;
@@ -221,10 +223,12 @@
     border-radius: 30px;
     width: 375px;
     height: 120px;
-    overflow: hidden;
+    z-index: 5;
+    // overflow: hidden;
 
     &--open {
       display: flex;
+      z-index: 3;
     }
 
     .dialogue-cardname {
@@ -258,5 +262,13 @@
     }
 
   }
+
+  // .card-remove-background {
+  //   position: absolute;
+  //   background-color: #000000e7;
+  //   width: 100vw;
+  //   height: 100vh;
+  //   z-index: 1;
+  // }
 
 }
