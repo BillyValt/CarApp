@@ -113,7 +113,7 @@ li {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: #0066b4;
 }
 
 html {
@@ -127,6 +127,10 @@ body {
   font-family: "Roboto Condensed";
   color: white;
   min-height: 100vh;
+}
+
+.stop-scrolling {
+  overflow: hidden;
 }
 
 .main {
@@ -678,21 +682,23 @@ li {
   border-radius: 30px;
   width: 375px;
   height: 120px;
-  z-index: 5;
+  z-index: 6;
 }
 .main .card-remove-dialogue--open {
   display: flex;
-  z-index: 3;
+  z-index: 5;
 }
 .main .card-remove-dialogue .dialogue-cardname {
   display: flex;
   align-items: center;
   height: 100%;
+  z-index: 6;
 }
 .main .card-remove-dialogue .js-dialogue-cardname {
   display: flex;
   align-items: center;
   line-height: 0px;
+  z-index: 6;
 }
 .main .card-remove-dialogue .buttons-container {
   display: flex;
@@ -700,6 +706,7 @@ li {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  z-index: 6;
 }
 .main .card-remove-dialogue .buttons-container .option-button {
   color: white;
@@ -708,6 +715,22 @@ li {
   border: none;
   width: 100%;
   cursor: pointer;
+  z-index: 6;
+}
+
+.card-remove-background {
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.414);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3 !important;
+  overflow: hidden;
+}
+.card-remove-background--open {
+  display: block;
 }
 
 footer * {

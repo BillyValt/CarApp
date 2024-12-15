@@ -15,6 +15,7 @@ const dialogueCardEl = document.querySelector('.card-remove-dialogue');
 const dialCardYesBtn = document.querySelector('.js-yes-btn--card');
 const dialCardNoBtn = document.querySelector('.js-no-btn--card');
 const dialogueCardNameEl = document.querySelector('.js-dialogue-cardname');
+const dialogueBlackBackgroundEl = document.querySelector('.card-remove-background');
 
 
 const clickedCarId = getFromStorage('clickedCarId');
@@ -119,6 +120,10 @@ function renderLogsList() {
   trashIcn.forEach((button, btnIndex) => {
     button.addEventListener('click', () => {
       dialogueCardEl.classList.add('card-remove-dialogue--open');
+      dialogueBlackBackgroundEl.classList.add('card-remove-background--open');
+      // document.body.style.filter = 'blur(4px)';
+      document.body.classList.add('stop-scrolling');
+
 
       clickedRemBtnIndex = btnIndex;
       removeJobName = carMaintArr[btnIndex].chosenJob;
@@ -136,7 +141,9 @@ function removeCard(buttonIndex) {
 
 dialCardYesBtn.addEventListener('click', () => {
   dialogueCardEl.classList.remove('card-remove-dialogue--open');
+  dialogueBlackBackgroundEl.classList.remove('card-remove-background--open');
   console.log('called');
+  document.body.classList.remove('stop-scrolling');
 
   carMaintArr.forEach((card, cardIndex) => {
     if (clickedRemBtnIndex === cardIndex) {
@@ -149,4 +156,6 @@ dialCardYesBtn.addEventListener('click', () => {
 
 dialCardNoBtn.addEventListener('click', () => {
   dialogueCardEl.classList.remove('card-remove-dialogue--open');
+  dialogueBlackBackgroundEl.classList.remove('card-remove-background--open');
+  document.body.classList.remove('stop-scrolling');
 })
